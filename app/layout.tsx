@@ -8,7 +8,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>Xavier</title>
+        <title>Xavier Fernandes</title>
         <meta name="description" content="Learn more about our team" />
       </head>
       <body>{children}</body>
