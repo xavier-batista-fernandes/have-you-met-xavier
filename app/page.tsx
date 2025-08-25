@@ -1,75 +1,64 @@
+"use client";
 import { GitHubIcon } from "@/components/icons/github-icon";
 import { LinkedInIcon } from "@/components/icons/linkedin-icon";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    const items = document.getElementById("items")?.children!;
+    for (const item of items) {
+      const handlerMouseOver = () => {
+        console.log(item);
+        item.style.transition = `transform 0.5s ease-in-out, height 0.5s ease-in-out`;
+        item.style.transform = `translateX(20px)`;
+      };
+      item.addEventListener("click", handlerMouseOver);
+
+      const handlerMouseLeave = () => {
+        console.log(item);
+        item.style.transition = `transform 0.5s ease-in-out, height 0.5s ease-in-out`;
+        item.style.transform = `translateX(-20px)`;
+      };
+      item.addEventListener("click", handlerMouseLeave);
+    }
+  }, []);
+
   return (
     <>
-      <div className="grid-bg" aria-hidden="true" />
-      <div className=" min-h-screen flex flex-col items-center justify-center bg-transparent text-neutral-100 overflow-hidden">
-        {/* Grid background effect */}
-        <div className="w-full flex z-10 items-start min-h-screen">
-          {/** LEFT PANEL: Description */}
-          <section className="w-1/2 py-12 text-center">
-            <h1 className="text-4xl font-bold mb-6 select-none uppercase tracking-widest">
-              Xavier Fernandes
-            </h1>
-            <div className="leading-relaxed text-neutral-300 px-12">
-              I'm a 24-year-old Software Engineer based in Lisbon, passionate about building
-              engaging and scalable software solutions. My interest in web development started
-              during my academic years as both a student and a teaching assistant, which naturally
-              led me into a fullstack role as my first professional experience.
-              <br />
-              <br />
-              I'm driven by curiosity and the excitement of building things from scratch. I often
-              want to understand how things work under the hood, because it helps me applying good
-              practices that improve the codebase and the user experience. There's nothing quite
-              like seeing good code come to life and make a real impact.
-              <br />
-              <br />
-              Currently I’m developing features for a B2B product at Volkswagen Digital Solutions.
-              In my spare time I’m building a side project focused on the geography of Portuguese
-              municipalities.
-            </div>
-          </section>
-
-          {/** RIGHT PANEL: Navigation links */}
-          <aside className="w-1/2 flex flex-col h-full bg-black grow-[1]">
-            <a
-              href="/blog"
-              className="w-full border-dashed border-neutral-700 text-neutral-200 hover:border-blue-400 transition-colors duration-200 block flex-1"
-            >
-              <div className="text-lg font-semibold px-0 py-4 text-center">Blog</div>
-              <div className="text-sm font-thin text-neutral-400 px-0 pb-4 text-center">
-                Read my latest thoughts on web development, engineering practices, and tech trends.
-                I share tips, tutorials, and personal stories from my journey.
-              </div>
-            </a>
-            <a
-              href="/projects"
-              className="w-full border-dashed border-neutral-700 text-neutral-200 hover:border-blue-400 transition-colors duration-200 block flex-1 group"
-            >
-              <div className="flex flex-col items-center py-6">
-                <div className="text-2xl font-bold text-center mb-2">Projects</div>
-                <div className="text-base text-neutral-400 text-center">
-                  Explore my portfolio of professional and side projects, including open source work
-                  and experiments in web, cloud, and data visualization.
-                </div>
-              </div>
-            </a>
-            <div className="w-full border-dashed border-neutral-700 text-neutral-200 hover:border-blue-400 transition-colors duration-200 block flex-1 group">
-              <div className="flex flex-col items-center py-6">
-                <div className="text-2xl font-bold text-center mb-2">About me</div>
-                <div className="text-base text-neutral-400 text-center">
-                  More content coming soon! Feel free to connect or check out my work below.
-                </div>
-              </div>
-            </div>
-          </aside>
+      {/* <div
+        className="fixed"
+        style={{ backgroundImage: "linear-gradient(to right, black 1px, black 1px)" }}
+      ></div> */}
+      <div
+        id="items"
+        className="relative h-screen bg-[#ede0d4] transition-transform"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, #ddb892 1px, transparent 1px), linear-gradient(to bottom, #ddb892 1px, transparent 1px)",
+          backgroundSize: "10vw 10vw",
+          backgroundPosition: "5vw 5vw",
+        }}
+      >
+        <div className="absolute h-5/6 aspect-square left-10 top-10 rounded-2xl border-1 shadow-2xl bg-[#b08968]">
+          <h2 className="font-bold text-xl w-fit -rotate-90 -translate-x-8 translate-y-18">
+            About Me
+          </h2>
         </div>
-
-        {/* Footer with contact links */}
+        <div className="absolute h-5/6 aspect-square left-18 top-14 rounded-2xl border-1 shadow-2xl bg-[#ddb892]">
+          <h2 className="font-bold text-xl w-fit -rotate-90 -translate-x-8 translate-y-18">
+            About Me
+          </h2>
+        </div>
+        <div className="absolute h-5/6 aspect-square left-26 top-18 rounded-2xl border-1 shadow-2xl bg-[#e6ccb2] ">
+          <h2 className="font-bold text-xl w-fit -rotate-90 -translate-x-8 translate-y-18">
+            About Me
+          </h2>
+        </div>
+        <div className="absolute h-5/6 aspect-square left-34 top-22 rounded-2xl border-1 shadow-2xl bg-[#e8a969] p-10">
+          <h1 className="font-extrabold text-5xl">Xavier Fernandes</h1>
+          <p>Software Developer</p>
+        </div>
       </div>
-      <FooterComponent />
     </>
   );
 }
