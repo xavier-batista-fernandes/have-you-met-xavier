@@ -1,7 +1,12 @@
 /** biome-ignore-all lint/a11y/noStaticElementInteractions: <explanation> */
 /** biome-ignore-all lint/a11y/useKeyWithClickEvents: <explanation> */
+
 "use client";
 
+import { AboutMeCard } from "@/components/cards/about-me-card";
+import { BlogCard } from "@/components/cards/blog-card";
+import { ContactCard } from "@/components/cards/contact-card";
+import { ProjectsCard } from "@/components/cards/projects-card";
 import { Roboto_Condensed } from "next/font/google";
 import { useState } from "react";
 
@@ -10,28 +15,31 @@ const labelFont = Roboto_Condensed({
   subsets: ["latin"],
 });
 
+const COLOR_BACKGROUND = "#252422";
+const COLOR_CARD = "#ccc5b9";
+
 const cards = [
-  { id: 1, title: "About Me", color: "#b08968" },
-  { id: 2, title: "Projects", color: "#ddb892" },
-  { id: 3, title: "Blog", color: "#e6ccb2" },
-  { id: 4, title: "Contact", color: "#e8a969" },
+  { id: 0, title: "About Me", theme: "#2f3e46", zIndex: 1 },
+  { id: 1, title: "Projects", theme: "#354f52", zIndex: 0 },
+  { id: 2, title: "Blog", theme: "#52796f", zIndex: 0 },
+  { id: 3, title: "Contact", theme: "#84a98c", zIndex: 0 },
 ];
 
 const squaresBg = {
-  backgroundImage:
-    "linear-gradient(to right, #ddb892 1px, transparent 1px), linear-gradient(to bottom, #ddb892 1px, transparent 1px)",
-  backgroundSize: "10vw 10vw",
-  backgroundPosition: "5vw 5vw",
-  backgroundColor: "#fff5eb",
-  // background: "radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 61, 99, 1) 100%)",
-  // backgroundSize: "500%",
-  // backgroundPosition: "left",
+  // backgroundImage:
+  //   "linear-gradient(to right, #ddb892 1px, transparent 1px), linear-gradient(to bottom, #ddb892 1px, transparent 1px)",
+  // backgroundSize: "10vw 10vw",
+  // backgroundPosition: "5vw 5vw",
+  // backgroundColor: "#fff5eb",
+  background: `radial-gradient(circle, rgba(255, 255, 255, 1) 0%, ${COLOR_BACKGROUND} 100%)`,
+  backgroundSize: "500%",
+  backgroundPosition: "left",
 };
 
 export default function Home() {
-  const [activeCard, setActiveCard] = useState(4);
+  const [zIndex, setZIndex] = useState(2);
 
-  const DURATION = 1000;
+  const DURATION = 750;
   const handleCardClick = (id: number) => {
     const card = document.getElementById(`card-${id}`);
     const label = document.getElementById(`label-${id}`);
@@ -45,19 +53,21 @@ export default function Home() {
         ],
         {
           duration: DURATION,
-          easing: "ease-in-out",
+          easing: "ease-out",
         },
       );
     });
 
     setTimeout(() => {
-      setActiveCard(id);
+      if (!card) return;
+      cards[id].zIndex = zIndex;
+      setZIndex((prev) => prev + 1);
     }, DURATION / 2);
   };
 
   return (
     <div className="h-screen flex justify-center py-[5%]" style={squaresBg}>
-      <div className="bg-amber-700 h-full w-[3%] flex flex-col justify-around items-center">
+      {/* <div className="bg-amber-700 h-full w-[3%] flex flex-col justify-around items-center">
         {Array.from({ length: 6 }).map((_, i) => (
           <div
             key={`hole-${i}`}
@@ -65,129 +75,54 @@ export default function Home() {
             style={squaresBg}
           ></div>
         ))}
-      </div>
+      </div> */}
 
       <div className="relative h-full flex-[0_0_auto] aspect-square">
-        {cards.map((card, index) => {
-          const isActive = activeCard === card.id;
+        {cards.map((card) => {
           return (
             <div
               id={`card-${card.id}`}
               key={card.id}
-              className=" absolute inset-0"
+              className="absolute inset-0 p-10 overflow-scroll"
               style={{
-                backgroundColor: card.color,
-                zIndex: isActive ? 50 : index + 1,
+                backgroundColor: COLOR_CARD,
+                zIndex: card.zIndex,
               }}
             >
-              {getCardContent(card.id)}
+              {card.id === 0 && <AboutMeCard theme={card.theme} />}
+              {card.id === 1 && <ProjectsCard />}
+              {card.id === 2 && <BlogCard theme={card.theme} />}
+              {card.id === 3 && <ContactCard theme={card.theme} />}
             </div>
           );
         })}
       </div>
 
-      <ul className="flex flex-col gap-1 flex-[0_0_auto]">
-        {cards.map((card) => (
-          <li
-            id={`label-${card.id}`}
-            key={card.id}
-            className="h-[20%] rounded-r-xl overflow-hidden"
-            onClick={() => handleCardClick(card.id)}
-          >
-            <h2
-              className="font-extrabold py-2 text-center select-none cursor-pointer h-full"
-              style={{
-                writingMode: "sideways-rl",
-                backgroundColor: card.color,
-                fontFamily: labelFont.style.fontFamily,
-              }}
+      <ul className="my-[1%] flex flex-col gap-1 flex-[0_0_auto]">
+        {cards.map((card) => {
+          const isCardActive = Math.max(...cards.map((c) => c.zIndex)) === card.zIndex;
+          return (
+            <li
+              id={`label-${card.id}`}
+              key={card.id}
+              className="h-[20%] rounded-r-xl overflow-hidden"
             >
-              {card.title}
-            </h2>
-          </li>
-        ))}
+              <button
+                type="button"
+                onClick={() => !isCardActive && handleCardClick(card.id)}
+                className={`font-extrabold py-2 text-center select-none ${isCardActive ? "cursor-default" : "cursor-pointer"} h-full`}
+                style={{
+                  writingMode: "sideways-rl",
+                  backgroundColor: card.theme,
+                  fontFamily: labelFont.style.fontFamily,
+                }}
+              >
+                {card.title}
+              </button>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
-}
-
-function getCardContent(id: number) {
-  switch (id) {
-    case 1:
-      return (
-        <div>
-          <h1 className="text-3xl font-bold mb-4">👋 About Me</h1>
-          <p className="mb-2">
-            Hi, I’m <strong>Xavier Batista Fernandes</strong>, a Software Engineer at
-            <em> Volkswagen Digital Solutions</em>. I’ve been coding professionally for about 1 year
-            and a half, focusing on frontend (React, TypeScript, Angular, Tailwind, design systems)
-            and also backend with Java and Spring Boot.
-          </p>
-          <p className="mb-2">
-            I enjoy building interactive apps with a touch of humor 😄 and I’m also into
-            accessibility (a11y), clean architecture, and learning more about authentication &
-            security.
-          </p>
-          <p>Fun fact: I’m also a speedcuber and created a Rubik’s Cube timer app ⏱️!</p>
-        </div>
-      );
-    case 2:
-      return (
-        <div>
-          <h1 className="text-3xl font-bold mb-4">🚀 Projects</h1>
-          <ul className="list-disc ml-5 space-y-2">
-            <li>
-              <strong>Municipalities (2023)</strong> – a daily game to guess Portuguese
-              municipalities.
-            </li>
-            <li>
-              <strong>Rubik’s Rush (2024)</strong> – a Rubik’s Cube timer & scramble generator.
-            </li>
-            <li>
-              <strong>Terras Lusas (2025)</strong> – interactive map app with “Marathon” mode.
-            </li>
-            <li>
-              <em>Coming soon…</em> 😉
-            </li>
-          </ul>
-        </div>
-      );
-    case 3:
-      return (
-        <div>
-          <h1 className="text-3xl font-bold mb-4">✍️ Blog</h1>
-          <p className="mb-2">
-            I’m working on a Next.js + MDX blog where I’ll post about web dev, observability,
-            accessibility, and sometimes playful side projects.
-          </p>
-          <p>Posts will be short, practical, and a bit playful — like learning notes in public.</p>
-        </div>
-      );
-    case 4:
-      return (
-        <div>
-          <h1 className="text-3xl font-bold mb-4">📬 Contact</h1>
-          <p className="mb-2">Let’s get in touch! You can find me on:</p>
-          <ul className="list-disc ml-5 space-y-1">
-            <li>
-              <a href="https://xavier-batista-fernandes.github.io/" className="underline">
-                Personal Website
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/xavier-batista-fernandes/" className="underline">
-                LinkedIn
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/xavier-batista-fernandes" className="underline">
-                GitHub
-              </a>
-            </li>
-          </ul>
-        </div>
-      );
-    default:
-      return null;
-  }
 }

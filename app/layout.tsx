@@ -1,4 +1,10 @@
 import "@/app/globals.css";
+import { Roboto_Condensed } from "next/font/google";
+
+const font = Roboto_Condensed({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
 
 export default function RootLayout({
   children,
@@ -11,7 +17,7 @@ export default function RootLayout({
         <title>Xavier Fernandes</title>
         <meta name="description" content="Learn more about our team" />
       </head>
-      <body>{children}</body>
+      <body className={font.className}>{children}</body>
     </html>
   );
 }
