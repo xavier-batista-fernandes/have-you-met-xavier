@@ -1,12 +1,12 @@
 import { TERRAS_LUSAS_URL } from "@/lib/pages";
-import { AboutMeIcon } from "../icons/about-me.icon";
+import { PersonIcon } from "../icons/person.icon";
 
 export function AboutMeCard({ theme }: { theme: string }) {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex gap-2 h-10 items-center">
-        <AboutMeIcon className="h-full" />
-        <h1 className="text-3xl font-bold">WHO AM I?</h1>
+        <PersonIcon className="h-full" />
+        <h1 className="text-3xl font-bold">HAVE YOU MET ME?</h1>
       </div>
 
       <p className="leading-relaxed font-light">
@@ -50,7 +50,7 @@ export function AboutMeCard({ theme }: { theme: string }) {
           className="inline-block text-transparent bg-clip-text cursor-pointer font-bold"
           style={{
             backgroundImage: `linear-gradient(90deg, ${theme}, #4a5565)`,
-            backgroundSize: "500% 100%",
+            backgroundSize: "300% 100%",
             animation: "moveGradient 3s linear infinite",
           }}
         >

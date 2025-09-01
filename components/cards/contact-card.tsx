@@ -1,10 +1,14 @@
 import { GitHubIcon } from "@/components/icons/github-icon";
 import { LinkedInIcon } from "@/components/icons/linkedin-icon";
+import { BellIcon } from "../icons/bell.icon";
 
 export function ContactCard({ theme }: { theme: string }) {
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-4">REACH OUT AND SAY HELLO!</h1>
+      <div className="flex gap-2 h-10 items-center">
+        <BellIcon className="h-full" />
+        <h1 className="text-3xl font-bold">REACH OUT AND SAY HELLO!</h1>
+      </div>
 
       <p className="mb-2">
         I’d love to hear from you! Whether it’s feedback, collaboration, or a friendly hello, feel

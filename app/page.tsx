@@ -17,12 +17,13 @@ const labelFont = Roboto_Condensed({
 
 const COLOR_BACKGROUND = "#252422";
 const COLOR_CARD = "#ccc5b9";
+const COLOR_LABELS_TEXT = "black";
 
 const cards = [
-  { id: 0, title: "About Me", theme: "#2f3e46", zIndex: 1 },
-  { id: 1, title: "Projects", theme: "#354f52", zIndex: 0 },
-  { id: 2, title: "Blog", theme: "#52796f", zIndex: 0 },
-  { id: 3, title: "Contact", theme: "#84a98c", zIndex: 0 },
+  { id: 0, title: "About Me", theme: "#7f4f24", zIndex: 1 },
+  { id: 1, title: "Projects", theme: "#936639", zIndex: 0 },
+  { id: 2, title: "Blog", theme: "#a68a64", zIndex: 0 },
+  { id: 3, title: "Contact", theme: "#b6ad90", zIndex: 0 },
 ];
 
 const squaresBg = {
@@ -31,16 +32,43 @@ const squaresBg = {
   // backgroundSize: "10vw 10vw",
   // backgroundPosition: "5vw 5vw",
   // backgroundColor: "#fff5eb",
-  background: `radial-gradient(circle, rgba(255, 255, 255, 1) 0%, ${COLOR_BACKGROUND} 100%)`,
-  backgroundSize: "500%",
+  background: `linear-gradient(to right, ${COLOR_BACKGROUND} 0%, ${COLOR_CARD}  100%)`,
+  backgroundSize: "200% 200%",
   backgroundPosition: "left",
 };
 
 export default function Home() {
   const [zIndex, setZIndex] = useState(2);
 
-  const DURATION = 750;
+  function handleMoreInfo() {
+    const container = document.querySelector("main");
+    if (!container) return;
+
+    const moreInfoDiv = document.createElement("div");
+
+    moreInfoDiv.style.height = "50%";
+    moreInfoDiv.style.aspectRatio = "1/1";
+
+    moreInfoDiv.style.position = "absolute";
+    moreInfoDiv.style.inset = "0";
+    moreInfoDiv.style.margin = "auto";
+
+    moreInfoDiv.style.zIndex = "100";
+    moreInfoDiv.style.transition = "inset 0.5s ease-in-out";
+
+    setTimeout(() => {
+      moreInfoDiv.style.left = "-100%";
+      container.style.justifyContent = "flex-end";
+      container.style.transition = "flex 0.5s ease-in-out";
+    }, 500);
+
+    moreInfoDiv.style.backgroundColor = "coral";
+    moreInfoDiv.textContent = "More Info";
+    container.prepend(moreInfoDiv);
+  }
+
   const handleCardClick = (id: number) => {
+    const DURATION = 750;
     const card = document.getElementById(`card-${id}`);
     const label = document.getElementById(`label-${id}`);
 
@@ -66,7 +94,11 @@ export default function Home() {
   };
 
   return (
-    <div className="h-screen flex justify-center py-[5%]" style={squaresBg}>
+    <main
+      className="relative h-screen flex justify-center py-[5%]"
+      style={{ ...squaresBg, animation: "moveGradient 10s linear infinite" }}
+    >
+      {/* <button onClick={handleMoreInfo}>What?</button> */}
       {/* <div className="bg-amber-700 h-full w-[3%] flex flex-col justify-around items-center">
         {Array.from({ length: 6 }).map((_, i) => (
           <div
@@ -77,13 +109,13 @@ export default function Home() {
         ))}
       </div> */}
 
-      <div className="relative h-full flex-[0_0_auto] aspect-square">
+      <div className="relative h-full flex-[0_0_auto] max-w-[80vw] aspect-square">
         {cards.map((card) => {
           return (
             <div
               id={`card-${card.id}`}
               key={card.id}
-              className="absolute inset-0 p-10 overflow-scroll"
+              className="absolute inset-0 p-10 overflow-scroll border-1"
               style={{
                 backgroundColor: COLOR_CARD,
                 zIndex: card.zIndex,
@@ -98,21 +130,22 @@ export default function Home() {
         })}
       </div>
 
-      <ul className="my-[1%] flex flex-col gap-1 flex-[0_0_auto]">
+      <ul className="my-[1%] flex flex-col gap-2 flex-[0_0_auto]">
         {cards.map((card) => {
           const isCardActive = Math.max(...cards.map((c) => c.zIndex)) === card.zIndex;
           return (
             <li
               id={`label-${card.id}`}
               key={card.id}
-              className="h-[20%] rounded-r-xl overflow-hidden"
+              className="h-[25%] rounded-r-xl overflow-hidden "
             >
               <button
                 type="button"
                 onClick={() => !isCardActive && handleCardClick(card.id)}
-                className={`font-extrabold py-2 text-center select-none ${isCardActive ? "cursor-default" : "cursor-pointer"} h-full`}
+                className={` font-extrabold py-2 text-center select-none ${isCardActive ? "cursor-default" : "cursor-pointer"} h-full`}
                 style={{
                   writingMode: "sideways-rl",
+                  font: COLOR_LABELS_TEXT,
                   backgroundColor: card.theme,
                   fontFamily: labelFont.style.fontFamily,
                 }}
@@ -123,6 +156,6 @@ export default function Home() {
           );
         })}
       </ul>
-    </div>
+    </main>
   );
 }
