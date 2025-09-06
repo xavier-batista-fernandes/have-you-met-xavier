@@ -4,7 +4,7 @@ import { BellIcon } from "../icons/bell.icon";
 
 export function ContactCard({ theme }: { theme: string }) {
   return (
-    <div>
+    <div className="overflow-y-scroll p-10 h-full">
       <div className="flex gap-2 h-10 items-center">
         <BellIcon className="h-full" />
         <h1 className="text-3xl font-bold">REACH OUT AND SAY HELLO!</h1>

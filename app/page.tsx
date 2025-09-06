@@ -68,7 +68,7 @@ export default function Home() {
   }
 
   const handleCardClick = (id: number) => {
-    const DURATION = 750;
+    const DURATION = 1000;
     const card = document.getElementById(`card-${id}`);
     const label = document.getElementById(`label-${id}`);
 
@@ -76,7 +76,7 @@ export default function Home() {
       el?.animate(
         [
           { transform: "translate(0)" },
-          { transform: "translate(1000px)" },
+          { transform: "translate(100vw)" },
           { transform: "translate(0)" },
         ],
         {
@@ -109,13 +109,13 @@ export default function Home() {
         ))}
       </div> */}
 
-      <div className="relative h-full flex-[0_0_auto] max-w-[80vw] aspect-square">
+      <div className="relative h-full flex-[0_0_auto] w-5/6">
         {cards.map((card) => {
           return (
             <div
               id={`card-${card.id}`}
               key={card.id}
-              className="absolute inset-0 p-10 overflow-scroll border-1"
+              className="absolute inset-0 border-1 overflow-hidden"
               style={{
                 backgroundColor: COLOR_CARD,
                 zIndex: card.zIndex,
@@ -137,7 +137,7 @@ export default function Home() {
             <li
               id={`label-${card.id}`}
               key={card.id}
-              className="h-[25%] rounded-r-xl overflow-hidden "
+              className="h-[25%] rounded-r-xl overflow-hidden"
             >
               <button
                 type="button"

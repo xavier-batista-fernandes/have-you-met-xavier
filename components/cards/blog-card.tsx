@@ -2,7 +2,7 @@ import { BlogIcon } from "../icons/blog.icon";
 
 export function BlogCard({ theme }: { theme: string }) {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 p-10">
       <div className="flex gap-2 h-10 items-center">
         <BlogIcon className="h-full" />
         <h1 className="text-3xl font-bold">I HAVE A BLOG.</h1>
