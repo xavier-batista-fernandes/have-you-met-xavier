@@ -1,25 +1,34 @@
 import { useEffect, useRef } from "react";
 
+/**
+ * Custom hook to enable drag scrolling on an element.
+ *
+ * _Details_: \
+ * When mouse is down, saves the initial state (scroll and mouse position). \
+ * When mouse is moved, calculates the new state and updates it. \
+ * When mouse is up or leaves the element, stops the scrolling.
+ *
+ * @param scrollSpeed - The speed at which to scroll the element.
+ * @returns A ref to be attached to the element to enable drag scrolling.
+ */
 export function useDragScroll<T extends HTMLElement | null>(scrollSpeed: number = 1) {
   const ref = useRef<T | null>(null);
 
   useEffect(() => {
-    console.log("Setting up drag scroll for ", ref.current);
     const el = ref.current;
     if (!el) return;
 
     let isDown = false;
-    let startX: number;
-    let scrollLeft: number;
+    let startPosition: number, startScroll: number;
+    let newPosition: number, newScroll: number;
 
     const handleMouseDown = (e: MouseEvent) => {
-      console.log("Mouse down");
       isDown = true;
-      startX = e.pageX - el.offsetLeft;
-      scrollLeft = el.scrollLeft;
+      startPosition = e.pageX;
+      startScroll = el.scrollLeft;
     };
 
-    const handleMouseLeave = () => {
+    const handleMouseLeave = (e: MouseEvent) => {
       console.log("Mouse leave");
       isDown = false;
     };
@@ -30,12 +39,15 @@ export function useDragScroll<T extends HTMLElement | null>(scrollSpeed: number 
     };
 
     const handleMouseMove = (e: MouseEvent) => {
-      console.log("Mouse move");
       if (!isDown) return;
+
       e.preventDefault();
-      const x = e.pageX - el.offsetLeft;
-      const walk = (x - startX) * scrollSpeed;
-      el.scrollLeft = scrollLeft - walk;
+      newPosition = e.pageX;
+
+      const stride = (newPosition - startPosition) * scrollSpeed;
+      newScroll = startScroll - stride;
+
+      el.scrollLeft = newScroll;
     };
 
     el.addEventListener("mousedown", handleMouseDown);
