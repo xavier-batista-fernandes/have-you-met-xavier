@@ -115,10 +115,11 @@ export default function Home() {
             <div
               id={`card-${card.id}`}
               key={card.id}
-              className="absolute inset-0 border-1 overflow-hidden"
+              className="absolute inset-0 border-4 overflow-hidden shadow-2xl"
               style={{
                 backgroundColor: COLOR_CARD,
                 zIndex: card.zIndex,
+                borderColor: card.theme,
               }}
             >
               {card.id === 0 && <AboutMeCard theme={card.theme} />}

@@ -1,18 +1,20 @@
 // TODO: Have project details slide to the left side! Moving the whole deck a bit to the right.
+"use client";
 
+import { useDragScroll } from "@/hooks/use-drag-scroll";
 import { HammerIcon } from "../icons/hammer.icon";
 import { PaperClipIcon } from "../icons/paper-clip.icon";
 
 // For mobile this could be a modal.
 export function ProjectsCard() {
   return (
-    <div className="overflow-y-scroll h-full py-10 max-w-screen">
-      <div className="flex gap-2 h-10 items-center px-10">
+    <div className="overflow-y-scroll h-full p-10 max-w-screen">
+      <div className="flex gap-2 h-10 items-center">
         <HammerIcon className="h-full" />
         <h1 className="text-3xl font-bold">WHAT I HAVE BEEN UP TO.</h1>
       </div>
 
-      <p className="mt-5 px-10">
+      <p className="mt-5">
         I'm a coffee lover. They do say that developers are machines that turn coffee into code.
         That's me: I have a thousand of new ideas in my mind that I would like to implement. Some of
         them actually come to life, and I invite you to have a look at them!
@@ -40,8 +42,11 @@ export function ProjectsCard() {
 }
 
 function Timeline() {
+  const timelineRef = useDragScroll<HTMLDivElement>(1.5);
+
   return (
     <div
+      ref={timelineRef}
       className="overflow-x-auto cursor-grab active:cursor-grabbing w-full"
       style={{ scrollbarWidth: "none" }}
     >
