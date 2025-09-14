@@ -34,7 +34,7 @@ function Timeline() {
       className="overflow-x-scroll overflow-y-hidden active:cursor-grabbing w-full select-none"
       style={{ scrollbarWidth: "none" }}
     >
-      <div className="relative w-[300%] h-[50vh] px-[5%] border-blue-500 text-center">
+      <div className="relative w-[300%] h-[50vh] px-[5%] border-blue-500">
         <div id="top-section" className="relative w-full h-1/2 flex flex-row-reverse">
           <div id="2025" className="relative basis-1/3 border-red-600 ">
             <div className="absolute bottom-0 flex flex-col justify-center items-center border-pink-400 w-full">
@@ -87,7 +87,7 @@ function Timeline() {
 
         <div id="bottom-section" className="relative flex flex-row-reverse w-full h-1/2">
           <div id="2025-d" className=" w-1/3 h-full">
-            <div className="w-2/3 mx-auto border-green-700 flex flex-col justify-center gap-1 overflow-hidden">
+            <div className="w-2/3 mx-auto flex flex-col justify-center gap-1 overflow-hidden">
               <div className="h-2/5">
                 <h3 className="text-1xl font-bold">Terras Lusas</h3>
                 <p className="">A web app to explore the beautiful landscapes of Portugal.</p>
@@ -95,15 +95,19 @@ function Timeline() {
             </div>
           </div>
           <div id="2024-d" className="w-1/3 h-full">
-            <div className="w-2/3 mx-auto border-green-700 flex flex-col justify-center gap-1">
+            <div className="w-2/3 mx-auto flex flex-col gap-1">
               <div className="h-2/5">
-                <h3 className="text-1xl font-bold">Blog</h3>
-                <p className="">A platform to share my thoughts and experiences.</p>
+                <ul>
+                  <li>
+                    <h3 className="text-1xl font-bold">Blog</h3>
+                    <p className="">A platform to share my thoughts and experiences.</p>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
           <div id="2023-d" className="w-1/3 h-full">
-            <div className="w-2/3 mx-auto border-green-700 flex flex-col justify-center gap-1">
+            <div className="w-2/3 mx-auto flex flex-col justify-center gap-1">
               <div className="h-2/5">
                 <h3 className="text-1xl font-bold">IPMA+</h3>
                 <p className="">A project to automate weather data collection.</p>
