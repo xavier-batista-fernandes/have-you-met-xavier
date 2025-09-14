@@ -115,7 +115,7 @@ export default function Home() {
             <div
               id={`card-${card.id}`}
               key={card.id}
-              className="absolute inset-0 border-4 overflow-hidden shadow-2xl"
+              className="absolute inset-0 border-4 overflow-hidden"
               style={{
                 backgroundColor: COLOR_CARD,
                 zIndex: card.zIndex,
