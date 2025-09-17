@@ -10,7 +10,7 @@ import { useDragScroll } from "@/hooks/use-drag-scroll";
 // For mobile this could be a modal.
 export default function Projects() {
   return (
-    <div className="overflow-y-scroll h-full p-10 max-w-screen">
+    <div className="overflow-y-scroll h-full max-w-screen">
       <div className="flex gap-2 h-10 items-center">
         <HammerIcon className="fill-white h-full" />
         <h1 className="text-3xl font-bold">WHAT I HAVE BEEN UP TO.</h1>
@@ -34,7 +34,7 @@ function Timeline() {
       className="overflow-x-scroll overflow-y-hidden active:cursor-grabbing w-full select-none"
       style={{ scrollbarWidth: "none" }}
     >
-      <div className="relative w-[300%] h-[50vh] px-[5%] border-blue-500">
+      <div className="relative w-[300%] h-[50vh] border-blue-500">
         <div id="top-section" className="relative w-full h-1/2 flex flex-row-reverse">
           <div id="2025" className="relative basis-1/3 border-red-600 ">
             <div className="absolute bottom-0 flex flex-col justify-center items-center border-pink-400 w-full">
