@@ -13,7 +13,9 @@ export default function Projects() {
     <div className="h-full max-w-screen overflow-y-scroll">
       <div className="flex h-10 items-center gap-2">
         <HammerIcon className="h-full fill-white" />
-        <h1 className="text-3xl font-bold">WHAT I HAVE BEEN UP TO.</h1>
+        <h1 className="text-2xl font-bold lg:text-3xl">
+          WHAT I HAVE BEEN UP TO.
+        </h1>
       </div>
       <p className="mt-5">
         I'm a coffee lover. They do say that developers are machines that turn

@@ -49,7 +49,7 @@ export function AboutMeCard({ theme }: { theme: string }) {
       <div className="flex flex-col gap-4">
         <div className="flex h-10 gap-2">
           <PersonIcon className="h-full" />
-          <h1 className="text-3xl font-bold">HAVE YOU MET ME?</h1>
+          <h1 className="text-2xl font-bold lg:text-3xl">HAVE YOU MET ME?</h1>
         </div>
 
         <p className="leading-relaxed font-light">

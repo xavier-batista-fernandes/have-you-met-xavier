@@ -7,7 +7,9 @@ export function ContactCard({ theme }: { theme: string }) {
     <div className="h-full overflow-y-scroll p-10">
       <div className="flex h-10 items-center gap-2">
         <BellIcon className="h-full" />
-        <h1 className="text-3xl font-bold">REACH OUT AND SAY HELLO!</h1>
+        <h1 className="text-2xl font-bold lg:text-3xl">
+          REACH OUT AND SAY HELLO!
+        </h1>
       </div>
 
       <p className="mb-2">

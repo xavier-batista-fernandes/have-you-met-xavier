@@ -7,7 +7,9 @@ export default function Work() {
         <div className="bg-black lg:sticky lg:top-0">
           <div className="flex h-10 gap-2">
             <FilesIcon className="h-full fill-white" />
-            <h1 className="text-3xl font-bold">MY PROFESSIONAL PATH.</h1>
+            <h1 className="text-2xl font-bold lg:text-3xl">
+              MY PROFESSIONAL PATH.
+            </h1>
           </div>
 
           <p className="mt-3 leading-relaxed font-light">

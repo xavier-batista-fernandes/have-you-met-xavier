@@ -5,7 +5,7 @@ export function BlogCard({ theme }: { theme: string }) {
     <div className="flex flex-col gap-4 p-10">
       <div className="flex h-10 items-center gap-2">
         <BlogIcon className="h-full" />
-        <h1 className="text-3xl font-bold">I HAVE A BLOG.</h1>
+        <h1 className="text-2xl font-bold lg:text-3xl">I HAVE A BLOG.</h1>
       </div>
 
       <p className="leading-relaxed font-light">
