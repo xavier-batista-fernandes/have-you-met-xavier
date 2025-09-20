@@ -92,9 +92,9 @@ export default function Layout({
         </header>
         <main className="mt-10 text-[14px]">
           <div
-            className={`${font.className} flex flex-col items-start gap-10 sm:flex-row`}
+            className={`${font.className} flex flex-col items-start gap-10 lg:flex-row`}
           >
-            <section className="sticky top-0 shrink-0 basis-[350px]">
+            <section className="shrink-0 basis-[350px] lg:sticky lg:top-0">
               <p className="text-xs">
                 I'm a coffee lover. They do say that developers are machines
                 that turn coffee into code. That's me: I have a thousand of new

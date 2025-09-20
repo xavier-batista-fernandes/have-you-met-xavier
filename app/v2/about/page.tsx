@@ -5,7 +5,7 @@ export default function About() {
   return (
     <div className="relative h-full">
       <div className="flex flex-col gap-4">
-        <div className="sticky top-0 bg-black">
+        <div className="bg-black lg:sticky lg:top-0">
           <div className="flex h-10 gap-2">
             <PersonIcon className="h-full fill-white" />
             <h1 className="text-3xl font-bold">HAVE YOU MET ME?</h1>
