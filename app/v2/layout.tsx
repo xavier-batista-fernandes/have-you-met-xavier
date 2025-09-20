@@ -1,5 +1,8 @@
+'use client'
+
 import '@/app/v2/globals.css'
 import { BlogIcon } from '@/components/icons/blog.icon'
+import { CrossIcon } from '@/components/icons/cross.icon'
 import { ExternalIcon } from '@/components/icons/external.icon'
 import { FilesIcon } from '@/components/icons/files.icon'
 import { HammerIcon } from '@/components/icons/hammer.icon'
@@ -7,6 +10,7 @@ import { MessagesIcon } from '@/components/icons/messages.icon'
 import { PersonIcon } from '@/components/icons/person.icon'
 import { Libre_Franklin } from 'next/font/google'
 import Link from 'next/link'
+import { useState } from 'react'
 
 const font = Libre_Franklin({
   weight: ['400', '700'],
@@ -18,15 +22,17 @@ export default function Layout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const [isNavOpen, setIsNavOpen] = useState(false)
+
   return (
     <html lang="en">
       <head>
         <title>About - Xavier Fernandes</title>
         <link rel="icon" type="image/x-icon" href="/favicon.svg" />
       </head>
-      <body className="bg-black p-10 text-white">
-        <header className="flex h-[30vh] gap-10">
-          <div className="basis-[350px]">
+      <body className="box-content bg-black p-10 text-white">
+        <header className="flex h-[30vh] flex-col gap-10 overflow-auto lg:flex-row">
+          <div className="basis-[350px] text-center lg:text-left">
             <h1 className="p-0 text-2xl font-light uppercase">
               Xavier Fernandes
             </h1>
@@ -45,49 +51,62 @@ export default function Layout({
               <hr className="border-t-[0.5px] border-[#4f4f4f]" />
             </div>
           </div>
-          <nav className="grow-1">
-            <ul className="flex flex-col text-sm">
-              <hr className="border-t-[0.5px] border-[#4f4f4f]" />
+          <button
+            type="button"
+            onClick={() => setIsNavOpen((x) => !x)}
+            className="fixed top-5 right-5 z-101 cursor-pointer lg:hidden"
+          >
+            <CrossIcon
+              className={`h-7 w-7 fill-white ${isNavOpen ? 'rotate-0' : 'rotate-135'} transition-transform ease-in-out`}
+            />
+          </button>
+          <nav
+            className={`fixed top-0 left-0 z-100 h-screen w-full overflow-auto bg-gray-800 fill-white ${isNavOpen ? '' : '-translate-y-full'} transition-transform duration-300 ease-in-out`}
+          >
+            <ul className="flex h-full flex-col items-center justify-center gap-2 text-sm">
               <li className="transition-colors duration-200 ease-out hover:bg-white/10">
                 <Link
+                  onClick={() => setIsNavOpen(false)}
                   href="/v2/about"
-                  className="flex items-center gap-2 px-3 py-3"
+                  className="flex items-center justify-center gap-2 px-3 py-3"
                 >
                   <PersonIcon className="h-6 w-6 fill-white" />
                   <span>About</span>
                 </Link>
               </li>
-              <hr className="border-t-[0.5px] border-[#4f4f4f]" />
+
               <li className="transition-colors duration-200 ease-out hover:bg-white/10">
                 <Link
+                  onClick={() => setIsNavOpen(false)}
                   href="/v2/blog"
-                  className="flex items-center gap-2 px-3 py-3"
+                  className="flex items-center justify-center gap-2 px-3 py-3"
                 >
                   <BlogIcon className="h-6 w-6 fill-white" />
                   <span>Blog</span>
                 </Link>
               </li>
-              <hr className="border-t-[0.5px] border-[#4f4f4f]" />
+
               <li className="transition-colors duration-200 ease-out hover:bg-white/10">
                 <Link
+                  onClick={() => setIsNavOpen(false)}
                   href="/v2/projects"
-                  className="flex items-center gap-2 px-3 py-3"
+                  className="flex items-center justify-center gap-2 px-3 py-3"
                 >
                   <HammerIcon className="h-6 w-6 fill-white" />
                   <span>Projects</span>
                 </Link>
               </li>
-              <hr className="border-t-[0.5px] border-[#4f4f4f]" />
+
               <li className="transition-colors duration-200 ease-out hover:bg-white/10">
                 <Link
+                  onClick={() => setIsNavOpen(false)}
                   href="/v2/work"
-                  className="flex items-center gap-2 px-3 py-3"
+                  className="flex items-center justify-center gap-2 px-3 py-3"
                 >
                   <FilesIcon className="h-6 w-6 fill-white" />
                   <span>Work</span>
                 </Link>
               </li>
-              <hr className="border-t-[0.5px] border-[#4f4f4f]" />
             </ul>
           </nav>
         </header>
