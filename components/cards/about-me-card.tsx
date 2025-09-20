@@ -1,4 +1,4 @@
-import { TERRAS_LUSAS_URL } from "@/lib/pages";
+import { TERRAS_LUSAS_URL } from "@/lib/constants/pages";
 import { useState } from "react";
 import { PersonIcon } from "../icons/person.icon";
 import "./about-me-card.css";
