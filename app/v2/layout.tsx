@@ -22,6 +22,7 @@ export default function Layout({
     <html lang="en">
       <head>
         <title>About - Xavier Fernandes</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.svg" />
       </head>
       <body className="bg-black p-10 text-white">
         <header className="flex h-[30vh] gap-10">
@@ -94,36 +95,44 @@ export default function Layout({
           <div
             className={`${font.className} flex flex-col items-start gap-10 lg:flex-row`}
           >
-            <section className="shrink-0 basis-[350px] lg:sticky lg:top-0">
-              <p className="text-xs">
-                I'm a coffee lover. They do say that developers are machines
-                that turn coffee into code. That's me: I have a thousand of new
-                ideas in my mind that I would like to implement. Some of them
-                actually come to life, and I invite you to have a look at them!
-              </p>
-              <ul className="mt-10 flex flex-col text-sm">
-                <hr className="border-t-[0.5px] border-[#4f4f4f]" />
-                <li className="transition-colors duration-200 ease-out hover:bg-white/10">
-                  <a
-                    href="https://github.com/xavier-batista-fernandes"
-                    className="flex items-center gap-2 px-3 py-3"
-                  >
-                    <ExternalIcon className="h-4 w-4 fill-white" />
-                    <span>GitHub</span>
-                  </a>
-                </li>
-                <hr className="border-t-[0.5px] border-[#4f4f4f]" />
-                <li className="transition-colors duration-200 ease-out hover:bg-white/10">
-                  <a
-                    href="https://www.linkedin.com/in/xavierbatistafernandes/"
-                    className="flex items-center gap-2 px-3 py-3"
-                  >
-                    <ExternalIcon className="h-4 w-4 fill-white" />
-                    <span>LinkedIn</span>
-                  </a>
-                </li>
-                <hr className="border-t-[0.5px] border-[#4f4f4f]" />
-              </ul>
+            <section className="flex shrink-0 basis-[350px] flex-col items-center gap-10 lg:sticky lg:top-0">
+              <img
+                src="/images/cat.webp"
+                alt="An animated cat drinking a cup of coffee."
+                className="w-1/2 max-w-[250px] select-none"
+              />
+              <div>
+                <p className="text-xs">
+                  I'm a coffee lover. They do say that developers are machines
+                  that turn coffee into code. That's me: I have a thousand of
+                  new ideas in my mind that I would like to implement. Some of
+                  them actually come to life, and I invite you to have a look at
+                  them!
+                </p>
+                <ul className="mt-10 flex w-full flex-col text-sm">
+                  <hr className="border-t-[0.5px] border-[#4f4f4f]" />
+                  <li className="transition-colors duration-200 ease-out hover:bg-white/10">
+                    <a
+                      href="https://github.com/xavier-batista-fernandes"
+                      className="flex items-center gap-2 px-3 py-3"
+                    >
+                      <ExternalIcon className="h-4 w-4 fill-white" />
+                      <span>GitHub</span>
+                    </a>
+                  </li>
+                  <hr className="border-t-[0.5px] border-[#4f4f4f]" />
+                  <li className="transition-colors duration-200 ease-out hover:bg-white/10">
+                    <a
+                      href="https://www.linkedin.com/in/xavierbatistafernandes/"
+                      className="flex items-center gap-2 px-3 py-3"
+                    >
+                      <ExternalIcon className="h-4 w-4 fill-white" />
+                      <span>LinkedIn</span>
+                    </a>
+                  </li>
+                  <hr className="border-t-[0.5px] border-[#4f4f4f]" />
+                </ul>
+              </div>
             </section>
             <section className="h-[200vh] grow-1">{children}</section>
           </div>

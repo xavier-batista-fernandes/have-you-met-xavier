@@ -31,12 +31,10 @@ export function useDragScroll<T extends HTMLElement | null>(
     }
 
     const handleMouseLeave = (e: MouseEvent) => {
-      console.log('Mouse leave')
       isDown = false
     }
 
     const handleMouseUp = () => {
-      console.log('Mouse up')
       isDown = false
     }
 
