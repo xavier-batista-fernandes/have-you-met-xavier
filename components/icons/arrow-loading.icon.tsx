@@ -11,7 +11,11 @@ export function ArrowLoadingIcon({ className }: { className?: string }) {
       fill="none"
     >
       <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-      <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+      <g
+        id="SVGRepo_tracerCarrier"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      ></g>
       <g id="SVGRepo_iconCarrier">
         <path d="M53.72,36.61A21.91,21.91,0,1,1,50.37,20.1"></path>
         <polyline points="51.72 7.85 50.85 20.78 37.92 19.9"></polyline>
@@ -19,5 +23,5 @@ export function ArrowLoadingIcon({ className }: { className?: string }) {
         <polyline points="51.72 7.85 50.85 20.78 37.92 19.9"></polyline>
       </g>
     </svg>
-  );
+  )
 }

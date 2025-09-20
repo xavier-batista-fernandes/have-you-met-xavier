@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef } from 'react'
 
 /**
  * Custom hook to enable drag scrolling on an element.
@@ -11,57 +11,59 @@ import { useEffect, useRef } from "react";
  * @param scrollSpeed - The speed at which to scroll the element.
  * @returns A ref to be attached to the element to enable drag scrolling.
  */
-export function useDragScroll<T extends HTMLElement | null>(scrollSpeed: number = 1) {
-  const ref = useRef<T | null>(null);
+export function useDragScroll<T extends HTMLElement | null>(
+  scrollSpeed: number = 1
+) {
+  const ref = useRef<T | null>(null)
 
   useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
+    const el = ref.current
+    if (!el) return
 
-    let isDown = false;
-    let startPosition: number, startScroll: number;
-    let newPosition: number, newScroll: number;
+    let isDown = false
+    let startPosition: number, startScroll: number
+    let newPosition: number, newScroll: number
 
     const handleMouseDown = (e: MouseEvent) => {
-      isDown = true;
-      startPosition = e.pageX;
-      startScroll = el.scrollLeft;
-    };
+      isDown = true
+      startPosition = e.pageX
+      startScroll = el.scrollLeft
+    }
 
     const handleMouseLeave = (e: MouseEvent) => {
-      console.log("Mouse leave");
-      isDown = false;
-    };
+      console.log('Mouse leave')
+      isDown = false
+    }
 
     const handleMouseUp = () => {
-      console.log("Mouse up");
-      isDown = false;
-    };
+      console.log('Mouse up')
+      isDown = false
+    }
 
     const handleMouseMove = (e: MouseEvent) => {
-      if (!isDown) return;
+      if (!isDown) return
 
-      e.preventDefault();
-      newPosition = e.pageX;
+      e.preventDefault()
+      newPosition = e.pageX
 
-      const stride = (newPosition - startPosition) * scrollSpeed;
-      newScroll = startScroll - stride;
+      const stride = (newPosition - startPosition) * scrollSpeed
+      newScroll = startScroll - stride
 
-      el.scrollLeft = newScroll;
-    };
+      el.scrollLeft = newScroll
+    }
 
-    el.addEventListener("mousedown", handleMouseDown);
-    el.addEventListener("mouseleave", handleMouseLeave);
-    el.addEventListener("mouseup", handleMouseUp);
-    el.addEventListener("mousemove", handleMouseMove);
+    el.addEventListener('mousedown', handleMouseDown)
+    el.addEventListener('mouseleave', handleMouseLeave)
+    el.addEventListener('mouseup', handleMouseUp)
+    el.addEventListener('mousemove', handleMouseMove)
 
     return () => {
-      el.removeEventListener("mousedown", handleMouseDown);
-      el.removeEventListener("mouseleave", handleMouseLeave);
-      el.removeEventListener("mouseup", handleMouseUp);
-      el.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
+      el.removeEventListener('mousedown', handleMouseDown)
+      el.removeEventListener('mouseleave', handleMouseLeave)
+      el.removeEventListener('mouseup', handleMouseUp)
+      el.removeEventListener('mousemove', handleMouseMove)
+    }
+  }, [])
 
-  return ref;
+  return ref
 }
