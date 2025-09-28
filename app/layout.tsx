@@ -1,6 +1,6 @@
 'use client'
 
-import '@/app/v2/globals.css'
+import '@/app/globals.css'
 import { BlogIcon } from '@/components/icons/blog.icon'
 import { CrossIcon } from '@/components/icons/cross.icon'
 import { ExternalIcon } from '@/components/icons/external.icon'
@@ -67,7 +67,7 @@ export default function Layout({
               <li className="transition-colors duration-200 ease-out hover:bg-white/10">
                 <Link
                   onClick={() => setIsNavOpen(false)}
-                  href="/v2/about"
+                  href="#about"
                   className="flex items-center justify-center gap-2 px-3 py-3"
                 >
                   <PersonIcon className="h-6 w-6 fill-white" />
@@ -78,7 +78,7 @@ export default function Layout({
               <li className="transition-colors duration-200 ease-out hover:bg-white/10">
                 <Link
                   onClick={() => setIsNavOpen(false)}
-                  href="/v2/blog"
+                  href="#blog"
                   className="flex items-center justify-center gap-2 px-3 py-3"
                 >
                   <BlogIcon className="h-6 w-6 fill-white" />
@@ -89,7 +89,7 @@ export default function Layout({
               <li className="transition-colors duration-200 ease-out hover:bg-white/10">
                 <Link
                   onClick={() => setIsNavOpen(false)}
-                  href="/v2/projects"
+                  href="#projects"
                   className="flex items-center justify-center gap-2 px-3 py-3"
                 >
                   <HammerIcon className="h-6 w-6 fill-white" />
@@ -100,7 +100,7 @@ export default function Layout({
               <li className="transition-colors duration-200 ease-out hover:bg-white/10">
                 <Link
                   onClick={() => setIsNavOpen(false)}
-                  href="/v2/work"
+                  href="#work"
                   className="flex items-center justify-center gap-2 px-3 py-3"
                 >
                   <FilesIcon className="h-6 w-6 fill-white" />
@@ -114,7 +114,7 @@ export default function Layout({
           <div
             className={`${font.className} flex flex-col items-start gap-10 lg:flex-row`}
           >
-            <section className="flex shrink-0 basis-[350px] flex-col items-center gap-10 lg:sticky lg:top-0">
+            <section className="flex shrink-0 basis-[350px] flex-col items-center gap-10">
               <img
                 src="/images/cat.webp"
                 alt="An animated cat drinking a cup of coffee."

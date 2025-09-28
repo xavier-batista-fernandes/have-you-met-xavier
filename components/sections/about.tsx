@@ -3,9 +3,9 @@ import { TERRAS_LUSAS_URL } from '@/lib/constants/pages'
 
 export default function About() {
   return (
-    <div className="relative h-full">
+    <div className="relative h-full py-10">
       <div className="flex flex-col gap-4">
-        <div className="bg-black lg:sticky lg:top-0">
+        <div className="bg-black">
           <div className="flex h-10 gap-2">
             <PersonIcon className="h-full fill-white" />
             <h1 className="text-2xl font-bold lg:text-3xl">HAVE YOU MET ME?</h1>

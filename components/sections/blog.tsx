@@ -2,7 +2,7 @@ import { BlogIcon } from '@/components/icons/blog.icon'
 
 export default function Blog() {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 py-10">
       <div className="flex h-10 items-center gap-2">
         <BlogIcon className="h-full fill-white" />
         <h1 className="text-2xl font-bold lg:text-3xl">I HAVE A BLOG.</h1>
