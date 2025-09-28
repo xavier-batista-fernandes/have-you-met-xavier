@@ -9,7 +9,7 @@ import { HammerIcon } from '@/components/icons/hammer.icon'
 import { MessagesIcon } from '@/components/icons/messages.icon'
 import { PersonIcon } from '@/components/icons/person.icon'
 import { Libre_Franklin } from 'next/font/google'
-import Link from 'next/link'
+
 import { useState } from 'react'
 
 const font = Libre_Franklin({
@@ -27,7 +27,7 @@ export default function Layout({
   return (
     <html lang="en">
       <head>
-        <title>About - Xavier Fernandes</title>
+        <title>Xavier Fernandes - Portfolio</title>
         <link rel="icon" type="image/x-icon" href="/favicon.svg" />
       </head>
       <body className="box-content bg-black p-10 text-white">
@@ -65,47 +65,71 @@ export default function Layout({
           >
             <ul className="flex h-full flex-col items-center justify-center gap-2 text-sm">
               <li className="transition-colors duration-200 ease-out hover:bg-white/10">
-                <Link
-                  onClick={() => setIsNavOpen(false)}
-                  href="/v2/about"
+                <button
+                  type="button"
+                  onClick={() => {
+                    setIsNavOpen(false)
+                    document.getElementById('about')?.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start',
+                    })
+                  }}
                   className="flex items-center justify-center gap-2 px-3 py-3"
                 >
                   <PersonIcon className="h-6 w-6 fill-white" />
                   <span>About</span>
-                </Link>
+                </button>
               </li>
 
               <li className="transition-colors duration-200 ease-out hover:bg-white/10">
-                <Link
-                  onClick={() => setIsNavOpen(false)}
-                  href="/v2/blog"
+                <button
+                  type="button"
+                  onClick={() => {
+                    setIsNavOpen(false)
+                    document.getElementById('blog')?.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start',
+                    })
+                  }}
                   className="flex items-center justify-center gap-2 px-3 py-3"
                 >
                   <BlogIcon className="h-6 w-6 fill-white" />
                   <span>Blog</span>
-                </Link>
+                </button>
               </li>
 
               <li className="transition-colors duration-200 ease-out hover:bg-white/10">
-                <Link
-                  onClick={() => setIsNavOpen(false)}
-                  href="/v2/projects"
+                <button
+                  type="button"
+                  onClick={() => {
+                    setIsNavOpen(false)
+                    document.getElementById('projects')?.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start',
+                    })
+                  }}
                   className="flex items-center justify-center gap-2 px-3 py-3"
                 >
                   <HammerIcon className="h-6 w-6 fill-white" />
                   <span>Projects</span>
-                </Link>
+                </button>
               </li>
 
               <li className="transition-colors duration-200 ease-out hover:bg-white/10">
-                <Link
-                  onClick={() => setIsNavOpen(false)}
-                  href="/v2/work"
+                <button
+                  type="button"
+                  onClick={() => {
+                    setIsNavOpen(false)
+                    document.getElementById('work')?.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start',
+                    })
+                  }}
                   className="flex items-center justify-center gap-2 px-3 py-3"
                 >
                   <FilesIcon className="h-6 w-6 fill-white" />
                   <span>Work</span>
-                </Link>
+                </button>
               </li>
             </ul>
           </nav>
@@ -153,7 +177,7 @@ export default function Layout({
                 </ul>
               </div>
             </section>
-            <section className="h-[200vh] grow-1">{children}</section>
+            <section className="h-auto grow-1">{children}</section>
           </div>
         </main>
       </body>
