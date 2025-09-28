@@ -30,9 +30,9 @@ export default function Layout({
         <title>About - Xavier Fernandes</title>
         <link rel="icon" type="image/x-icon" href="/favicon.svg" />
       </head>
-      <body className="box-content bg-black p-10 text-white">
-        <header className="flex h-[30vh] flex-col gap-10 overflow-auto lg:flex-row">
-          <div className="basis-[350px] text-center lg:text-left">
+      <body className="bg-black p-10 text-white">
+        <header className="flex flex-col gap-10 overflow-auto lg:flex-row">
+          <div className="text-center lg:text-left">
             <h1 className="p-0 text-2xl font-light uppercase">
               Xavier Fernandes
             </h1>
@@ -110,11 +110,11 @@ export default function Layout({
             </ul>
           </nav>
         </header>
-        <main className="mt-10 text-[14px]">
+        <main className="mt-10 text-[14px] text-wrap">
           <div
             className={`${font.className} flex flex-col items-start gap-10 lg:flex-row`}
           >
-            <section className="flex shrink-0 basis-[350px] flex-col items-center gap-10">
+            <section className="flex flex-col items-center gap-10">
               <img
                 src="/images/cat.webp"
                 alt="An animated cat drinking a cup of coffee."
@@ -153,7 +153,7 @@ export default function Layout({
                 </ul>
               </div>
             </section>
-            <section className="h-[200vh] grow-1">{children}</section>
+            <section className="grow-1">{children}</section>
           </div>
         </main>
       </body>
