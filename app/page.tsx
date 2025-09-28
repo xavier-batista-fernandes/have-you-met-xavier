@@ -6,16 +6,16 @@ import Work from '../components/sections/work'
 export default function Page() {
   return (
     <>
-      <section className="h-[100vh]" id="about">
+      <section id="about">
         <About />
       </section>
-      <section className="h-[100vh]" id="projects">
+      <section id="projects">
         <Projects />
       </section>
-      <section className="h-[100vh]" id="work">
+      <section id="work">
         <Work />
       </section>
-      <section className="h-[100vh]" id="blog">
+      <section id="blog">
         <Blog />
       </section>
     </>
