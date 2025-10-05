@@ -63,6 +63,14 @@ export default function Layout({
             className={`${font.className} flex flex-col items-start gap-10 lg:flex-row`}
           >
             <section className="flex flex-col items-center gap-10">
+              <p className="mt-3 leading-relaxed font-light">
+                <span className="font-bold">
+                  Hey there! Glad to see you’ve wandered this far across the
+                  web!
+                </span>{' '}
+                Welcome to my little digital corner.
+              </p>
+
               <img
                 src="/images/cat.webp"
                 alt="An animated cat drinking a cup of coffee."
@@ -70,11 +78,11 @@ export default function Layout({
               />
               <div>
                 <p className="text-xs">
-                  I'm a coffee lover. They do say that developers are machines
-                  that turn coffee into code. That's me: I have a thousand of
-                  new ideas in my mind that I would like to implement. Some of
-                  them actually come to life, and I invite you to have a look at
-                  them!
+                  I’m {new Date().getFullYear() - 2000} years old. I'm a coffee
+                  lover. They do say that developers are machines that turn
+                  coffee into code. That's me: I have a thousand of new ideas in
+                  my mind that I would like to implement. Some of them actually
+                  come to life, and I invite you to have a look at them!
                 </p>
                 <ul className="mt-10 flex w-full flex-col text-sm">
                   <hr className="border-t-[0.5px] border-[#4f4f4f]" />
