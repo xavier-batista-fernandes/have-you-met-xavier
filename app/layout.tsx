@@ -29,7 +29,7 @@ export default function Layout({
       <body className="bg-black p-10 text-white">
         <header className="flex flex-col gap-10 overflow-auto lg:flex-row">
           <div className="text-center lg:text-left">
-            <h1 className="p-0 text-2xl font-light uppercase">
+            <h1 className="p-0 text-2xl font-bold uppercase">
               Xavier Fernandes
             </h1>
             <p className="text-4xl font-bold text-[#ABABAB]">

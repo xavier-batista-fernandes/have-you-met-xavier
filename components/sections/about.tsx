@@ -63,8 +63,8 @@ export default function About() {
             <p>
               Having a computer at home helped a lot. I spent countless hours
               exploring the digital world - playing video games with online
-              strangers, chatting with them - which really helped me get a hang
-              of English.
+              strangers and chatting with them - which really helped me get a
+              hang of English.
             </p>
           </div>
         </div>
