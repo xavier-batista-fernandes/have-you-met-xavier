@@ -56,7 +56,10 @@ export function Nav({
     >
       <ul className="flex h-full flex-col items-center justify-center gap-2 text-sm">
         {sections.map((section) => (
-          <li className="transition-colors duration-200 ease-out hover:bg-white/10">
+          <li
+            key={section.text}
+            className="transition-colors duration-200 ease-out hover:bg-white/10"
+          >
             <Link
               onClick={() => onLinkClick(false)}
               href={section.link}
