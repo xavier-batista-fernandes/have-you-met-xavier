@@ -20,7 +20,7 @@ export default function GlobalNotFound() {
           href="/"
           className="underline-[2px] font-thin decoration-[0.5px] underline-offset-4 hover:underline"
         >
-          Take me back
+          Back
         </a>
       </body>
     </html>
