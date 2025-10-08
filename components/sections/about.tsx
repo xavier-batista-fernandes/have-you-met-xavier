@@ -6,9 +6,11 @@ export default function About() {
     <div className="relative h-full py-10">
       <div className="flex flex-col gap-4">
         <div className="bg-black">
-          <div className="flex h-10 gap-2">
+          <div className="flex h-10 items-center gap-2">
             <PersonIcon className="h-full fill-white" />
-            <h1 className="text-2xl font-bold lg:text-3xl">HAVE YOU MET ME?</h1>
+            <h1 className="text-[min(4vw,_3rem)] font-bold">
+              HAVE YOU MET ME?
+            </h1>
           </div>
         </div>
 
