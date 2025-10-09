@@ -6,3 +6,6 @@ updates:
       interval: 'weekly'
       day: 'sunday'
       time: '12:00'
+    groups:
+      patch-updates:
+        update-types: ['patch']
