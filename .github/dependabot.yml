@@ -6,6 +6,8 @@ updates:
       interval: 'weekly'
       day: 'sunday'
       time: '12:00'
+    commit-message:
+      prefix: '🌱'
     groups:
       patch-updates:
         update-types: ['patch']
