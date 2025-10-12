@@ -6,7 +6,3 @@ updates:
       interval: 'daily'
     commit-message:
       prefix: '🌱 update'
-    open-pull-requests-limit: 20
-    groups:
-      patch-updates:
-        update-types: ['patch']
