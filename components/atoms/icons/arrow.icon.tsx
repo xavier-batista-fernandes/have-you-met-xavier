@@ -22,5 +22,5 @@ export function ArrowIcon({ className }: { className?: string }) {
         <polyline points="27.56 14.63 10.34 32.79 27.56 49.32"></polyline>
       </g>
     </svg>
-  )
+  );
 }

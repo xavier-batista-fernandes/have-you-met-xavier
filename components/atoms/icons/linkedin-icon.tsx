@@ -49,5 +49,5 @@ export function LinkedInIcon() {
         ></path>
       </g>
     </svg>
-  )
+  );
 }

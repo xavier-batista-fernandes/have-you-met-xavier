@@ -22,5 +22,5 @@ export function ExternalIcon({ className }: { className?: string }) {
         ></path>{' '}
       </g>
     </svg>
-  )
+  );
 }

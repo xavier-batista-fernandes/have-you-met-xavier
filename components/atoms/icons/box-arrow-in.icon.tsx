@@ -22,5 +22,5 @@ export function BoxArrowInIcon({ className }: { className?: string }) {
         <path d="M22.3,37.69V51.45a2.8,2.8,0,0,0,2.8,2.81H50.33a2.8,2.8,0,0,0,2.8-2.81V11.27a2.8,2.8,0,0,0-2.8-2.8H25.1a2.8,2.8,0,0,0-2.8,2.8V24.51"></path>
       </g>
     </svg>
-  )
+  );
 }
