@@ -5,5 +5,5 @@ updates:
     schedule:
       interval: 'daily'
     commit-message:
-      prefix: '🌱 update'
-      include: 'scope,version'
+      prefix: '🌱 dependabot'
+      include: 'scope'
