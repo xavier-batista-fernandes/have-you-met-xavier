@@ -1,13 +1,13 @@
-import { FilesIcon } from '@/components/icons/files.icon'
+import { FilesIcon } from '@/components/atoms/icons/files.icon';
 
 export default function Work() {
   return (
     <div className="relative h-full py-10">
       <div className="flex flex-col gap-4">
-        <div className="bg-black">
+        <div>
           <div className="flex h-10 items-center gap-2">
-            <FilesIcon className="h-full fill-white" />
-            <h1 className="text-[min(4vw,_3rem)] font-bold">
+            <FilesIcon className="h-full fill-black dark:fill-white" />
+            <h1 className="text-[min(4vw,_2rem)] font-bold">
               MY JOURNEY AS AN ENGINEER
             </h1>
           </div>
@@ -96,5 +96,5 @@ export default function Work() {
         </div>
       </div>
     </div>
-  )
+  );
 }

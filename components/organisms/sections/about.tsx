@@ -1,14 +1,16 @@
-import { PersonIcon } from '@/components/icons/person.icon'
-import { TERRAS_LUSAS_URL } from '@/lib/constants/pages'
+'use client';
+
+import { PersonIcon } from '@/components/atoms/icons/person.icon';
+import { TERRAS_LUSAS_URL } from '@/lib/constants/pages';
 
 export default function About() {
   return (
     <div className="relative h-full py-10">
       <div className="flex flex-col gap-4">
-        <div className="bg-black">
+        <div>
           <div className="flex h-10 items-center gap-2">
-            <PersonIcon className="h-full fill-white" />
-            <h1 className="text-[min(4vw,_3rem)] font-bold">
+            <PersonIcon className="h-full fill-black dark:fill-white" />
+            <h1 className="text-[min(4vw,_2rem)] font-bold">
               HAVE YOU MET ME?
             </h1>
           </div>
@@ -109,44 +111,27 @@ export default function About() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 function FooterNote() {
   return (
     <p className="text-sm leading-relaxed text-gray-600">
       <span className="font-bold">Note:</span> Not sure where{' '}
-      <button
-        type="button"
-        className="animateGradient inline-block cursor-pointer bg-clip-text font-bold text-transparent"
-        style={{
-          backgroundImage: `linear-gradient(to right, white,  #218ccf,  white)`,
-          backgroundSize: '1000% 100%',
-        }}
-      >
-        Figueira da Foz
-      </button>{' '}
-      or{' '}
-      <button
-        type="button"
-        className="animateGradient inline-block cursor-pointer bg-clip-text font-bold text-transparent"
-        style={{
-          backgroundImage: `linear-gradient(to right, white,  #218ccf,  white)`,
-          backgroundSize: '1000% 100%',
-        }}
-      >
-        Leiria
-      </button>{' '}
-      are? Check out{' '}
+      <strong>Figueira da Foz</strong> or <strong>Leiria</strong> is? Check out{' '}
       <a
-        className="rounded text-white"
         href={TERRAS_LUSAS_URL}
         target="_blank"
         rel="noopener noreferrer"
+        className="animateGradient inline-block cursor-pointer bg-clip-text font-bold text-transparent"
+        style={{
+          backgroundImage: `linear-gradient(to right, white,  #218ccf,  white)`,
+          backgroundSize: '1000% 100%',
+        }}
       >
         Terras Lusas
       </a>
       , an app I built to explore the municipalities of Portugal.
     </p>
-  )
+  );
 }

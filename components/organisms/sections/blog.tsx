@@ -1,11 +1,11 @@
-import { BlogIcon } from '@/components/icons/blog.icon'
+import { BlogIcon } from '@/components/atoms/icons/blog.icon';
 
 export default function Blog() {
   return (
     <div className="flex flex-col gap-4 py-10">
       <div className="flex h-10 items-center gap-2">
-        <BlogIcon className="h-full fill-white" />
-        <h1 className="text-[min(4vw,_3rem)] font-bold">I HAVE A BLOG.</h1>
+        <BlogIcon className="h-full fill-black dark:fill-white" />
+        <h1 className="text-[min(4vw,_2rem)] font-bold">I HAVE A BLOG.</h1>
       </div>
 
       <p className="leading-relaxed font-light">
@@ -40,5 +40,5 @@ export default function Blog() {
         <strong className="rounded px-1 text-white">Next.js</strong>!
       </p>
     </div>
-  )
+  );
 }
