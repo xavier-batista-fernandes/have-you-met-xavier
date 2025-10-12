@@ -1,34 +1,36 @@
-'use client'
+import '@/app/globals.css';
+import { ExternalIcon } from '@/components/atoms/icons/external.icon';
+import { MessagesIcon } from '@/components/atoms/icons/messages.icon';
+import { Nav } from '@/components/molecules/nav';
+import { ThemeToggle } from '@/components/molecules/theme-toggle';
 
-import '@/app/globals.css'
-import { CrossIcon } from '@/components/icons/cross.icon'
-import { ExternalIcon } from '@/components/icons/external.icon'
-import { MessagesIcon } from '@/components/icons/messages.icon'
-import { Nav } from '@/components/nav'
-import { Libre_Franklin } from 'next/font/google'
-import { useState } from 'react'
+import { Libre_Franklin } from 'next/font/google';
+import { cookies } from 'next/headers';
 
 const font = Libre_Franklin({
   weight: ['400', '700'],
   subsets: ['latin'],
-})
+});
 
-export default function Layout({
+export default async function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
-  const [isNavOpen, setIsNavOpen] = useState(false)
+  const themeCookie = (await cookies()).get('theme');
+  const theme = themeCookie?.value === 'dark' ? 'dark' : 'light';
 
   return (
-    <html lang="en">
+    <html lang="en" className={`${theme}`}>
       <head>
         <title>Have you met Xavier?</title>
         <link rel="icon" type="image/x-icon" href="/favicon.svg" />
       </head>
-      <body className="bg-black p-10 text-white">
-        <header className="flex flex-col gap-10 overflow-auto lg:flex-row">
+
+      <body className="bg-amber-50 p-10 text-neutral-900 lg:mx-[20vw] dark:bg-neutral-900 dark:text-amber-50">
+        <header className="flex flex-col gap-10 overflow-auto">
           <div className="text-center lg:text-left">
+            <ThemeToggle />
             <h1 className="p-0 text-xl font-extrabold tracking-widest uppercase">
               Xavier Fernandes
             </h1>
@@ -41,27 +43,17 @@ export default function Layout({
                 href="mailto:fernandesbatistaxavier@gmail.com"
                 className="flex items-center gap-2 p-3 text-xs transition-colors duration-200 ease-out hover:bg-white/10"
               >
-                <MessagesIcon className="h-4 w-4 fill-white" />
+                <MessagesIcon className="h-4 w-4 fill-black dark:fill-white" />
                 <span>Send me a message!</span>
               </a>
               <hr className="border-t-[0.5px] border-[#4f4f4f]" />
             </div>
           </div>
-          <button
-            type="button"
-            onClick={() => setIsNavOpen((x) => !x)}
-            className="fixed top-5 right-5 z-101 cursor-pointer lg:hidden"
-          >
-            <CrossIcon
-              className={`h-7 w-7 fill-white ${isNavOpen ? 'rotate-0' : 'rotate-135'} transition-transform ease-in-out`}
-            />
-          </button>
-          <Nav isOpen={isNavOpen} onLinkClick={setIsNavOpen} />
+
+          <Nav />
         </header>
         <main className="mt-10 text-[14px] text-wrap">
-          <div
-            className={`${font.className} flex flex-col items-start gap-10 lg:flex-row`}
-          >
+          <div className={`${font.className} flex flex-col items-start gap-10`}>
             <section className="flex flex-col items-center gap-10">
               <p className="mt-3 leading-relaxed font-light">
                 <span className="font-bold">
@@ -91,7 +83,7 @@ export default function Layout({
                       href="https://github.com/xavier-batista-fernandes"
                       className="flex items-center gap-2 px-3 py-3"
                     >
-                      <ExternalIcon className="h-4 w-4 fill-white" />
+                      <ExternalIcon className="h-4 w-4 fill-black dark:fill-white" />
                       <span>GitHub</span>
                     </a>
                   </li>
@@ -101,7 +93,7 @@ export default function Layout({
                       href="https://www.linkedin.com/in/xavierbatistafernandes/"
                       className="flex items-center gap-2 px-3 py-3"
                     >
-                      <ExternalIcon className="h-4 w-4 fill-white" />
+                      <ExternalIcon className="h-4 w-4 fill-black dark:fill-white" />
                       <span>LinkedIn</span>
                     </a>
                   </li>
@@ -114,5 +106,5 @@ export default function Layout({
         </main>
       </body>
     </html>
-  )
+  );
 }

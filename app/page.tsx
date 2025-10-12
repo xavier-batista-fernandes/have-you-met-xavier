@@ -1,7 +1,7 @@
-import About from '../components/sections/about'
-import Blog from '../components/sections/blog'
-import Projects from '../components/sections/projects'
-import Work from '../components/sections/work'
+import About from '@/components/organisms/sections/about';
+import Blog from '@/components/organisms/sections/blog';
+import Projects from '@/components/organisms/sections/projects';
+import Work from '@/components/organisms/sections/work';
 
 export default function Page() {
   return (
@@ -19,5 +19,5 @@ export default function Page() {
         <Blog />
       </section>
     </>
-  )
+  );
 }
