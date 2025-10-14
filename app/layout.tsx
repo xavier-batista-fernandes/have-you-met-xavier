@@ -57,7 +57,7 @@ export default async function RootLayout({
             <section className="flex flex-col items-center gap-10">
               <p className="mt-3 leading-relaxed font-light">
                 <span className="font-bold">
-                  Hey there! Glad to see you’ve wandered this far across the
+                  Hey there! Glad to see you've wandered this far across the
                   web!
                 </span>{' '}
                 Welcome to my little digital corner.
@@ -70,9 +70,9 @@ export default async function RootLayout({
               />
               <div>
                 <p className="text-xs">
-                  I’m {new Date().getFullYear() - 2000} years old. I'm a coffee
+                  I'm {new Date().getFullYear() - 2000} years old. I'm a coffee
                   lover. They do say that developers are machines that turn
-                  coffee into code. That's me: I have a thousand of new ideas in
+                  coffee into code. That's me: I have thousands of new ideas in
                   my mind that I would like to implement. Some of them actually
                   come to life, and I invite you to have a look at them!
                 </p>

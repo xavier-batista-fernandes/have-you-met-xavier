@@ -21,91 +21,115 @@ export default function About() {
           <div className="flex flex-col gap-6">
             <p>
               I was born in <strong>Figueira da Foz</strong>, a seaside city in
-              Portugal’s <strong>Coimbra</strong> district, but grew up a bit
+              Portugal's <strong>Coimbra</strong> district, but grew up a bit
               further south in <strong>Ilha</strong>, a village in the{' '}
               <strong>Leiria</strong> district. I spent most of my childhood in
               a small, quiet village full of pine trees. My parents' house was
               surrounded by these trees, and it was quite common to see rabbits
               and squirrels running around.
             </p>
+
             <p>
-              <strong>Ilha</strong> translates to “island” in Portuguese, which
-              often makes people think I’m from <strong>Madeira</strong> or the{' '}
-              <strong>Azores</strong> - a misunderstanding that has led to a few
-              funny moments. Although Leiria is in central Portugal, our accent
-              sometimes makes people think I’m from the north.
+              <strong>Ilha</strong> translates to <em>“island”</em> in
+              Portuguese, which often makes people think I'm from{' '}
+              <strong>Madeira</strong> or the <strong>Azores</strong>, a
+              misunderstanding that has led to a few funny moments. Although{' '}
+              <strong>Leiria</strong> is in central Portugal, our accent
+              sometimes makes people think I'm from the north.
             </p>
+
             <FooterNote />
+
             <p>
-              My home was always filled with music. My dad learned to play
-              guitar at a young age and turned that passion into a career. He’s
-              been teaching music for over 35 years and filled our house with
-              classics from <em>Pink Floyd</em>, <em>The Rolling Stones</em> and{' '}
-              <em>Dire Straits</em>. My brother and I took it a step further and
-              became regular enjoyers of all sorts of <em>metal</em> subgenres.
-              I still listen to it regularly, though I’ve grown to appreciate{' '}
+              Music was always playing at home. My dad learned to play guitar at
+              a young age and turned that passion into a career. He has been
+              teaching music for over 35 years and filled our house with
+              classics from <em>Pink Floyd</em>, <em>The Rolling Stones</em>,
+              and <em>Dire Straits</em>. My brother and I took it a step further
+              and became regular fans of all sorts of <em>metal</em> subgenres.
+              I still listen to it regularly, though I've grown to appreciate{' '}
               <em>bossa nova</em>, <em>jazz blues</em>, and <em>lo-fi</em> when
               I want something calmer.
             </p>
+
             <p>
-              During my teenage years I attended the same school where my dad
-              was giving music lessons. I think I've always been a good student.
-              Whenever I had homework I would do it right away so I could have
+              During my teenage years, I attended the same school where my dad
+              was teaching music. I've always considered myself a good student.
+              Whenever I had homework, I would do it right away so I could have
               the rest of the day to do whatever I wanted. My parents realized
               that, so they would let me have that freedom. And, of course,
               having my dad in the same school always helped me stay out of
               trouble.
             </p>
+
             <p>
-              That school, however, was quite far away from home. This meant
-              that the time I spent at school was also the only time I had to be
-              with my friends, so weekends back home were usually quiet. Of
-              course, I still had neighbors with ages similar to mine, but I
-              naturally found my own ways to run from boredom and stay
-              entertained.
+              That school, however, was quite far from home. This meant the time
+              I spent at school was also the only time I had to be with my
+              friends, so weekends back home were usually quiet. Of course, I
+              still had neighbors around my age, but I naturally found my own
+              ways to escape boredom and stay entertained.
             </p>
+
             <p>
-              Having a computer at home helped a lot. I spent countless hours
-              exploring the digital world - playing video games with online
-              strangers and chatting with them - which really helped me get a
-              hang of English.
+              Having a computer at home helped a lot. <br />
+              <strong>
+                I spent countless hours exploring the digital world
+              </strong>
+              , playing online video games with strangers and chatting with
+              them. It was my main source of English content and where I learned
+              most of what I know today.
             </p>
           </div>
         </div>
+
         <div>
           <h2 className="text-lg font-bold text-[#5b5b5b]">ABOUT MY HOBBIES</h2>
           <div className="flex flex-col gap-6">
             <p>
               In my early teens, my curiosity eventually led me to the{' '}
-              <strong>Rubik’s Cube</strong>. What started as a random challenge
+              <strong>Rubik's Cube</strong>. What started as a random challenge
               turned into a full-on obsession. Solving it over and over again
-              became a routine. At some point I was teaching others at school
-              how to solve it, and eventually I participated in a competition in
-              Porto. There, I met fellow <em>speedcubing</em> enjoyers like me,
-              and somehow even ended up in the national top rankings.
+              became a routine. At some point, I was teaching others at school
+              how to solve it, and eventually I participated in a competition in{' '}
+              <strong>Porto</strong>. There, I met fellow <em>speedcubers</em>{' '}
+              like myself and somehow even ended up in the national top
+              rankings.
             </p>
+
             <p>
-              I’m also a fan of <strong>jigsaw puzzles</strong> and usually have
-              one ongoing somewhere at home. There’s something relaxing about
+              I'm also a fan of <strong>jigsaw puzzles</strong> and usually have
+              one ongoing somewhere at home. There's something relaxing about
               slowly fitting the pieces together, seeing parts of the image
-              start to appear, everything coming together. When the last one’s
-              in place, I let it sit for a day or so... then pack it all up and
+              appear, and watching everything come together. When the last piece
+              is in place, I let it sit for a day or so, then pack it all up and
               start a new one right away.
             </p>
+
             <p>
-              Then there’s the whole world of <strong>board games</strong>. What
-              is there not to love? Back in school, my friends and I would stay
-              late at night at our local café playing board and sometimes card
-              games. Often, we tried switching games up, but always came back to{' '}
-              <em>Catan</em>. Over time, we all became dangerously good at it,
-              and there were even days when we squeezed in a quick match between
-              classes or right before catching the bus home.
+              Having a computer at home helped a lot. <br />
+              <strong>
+                I spent countless hours exploring the digital world
+              </strong>
+              , playing online video games with strangers and chatting with
+              them. It was my main source of English content and where I learned
+              most of what I know today.
+              <br />
             </p>
             <p>
-              Somewhere along the way, all those interests - logic, puzzles, and
-              building things - made me realize that{' '}
+              <em>One of the first games I ever played was Minecraft</em>. The
+              ability to explore, gather resources, and build anything I could
+              imagine absolutely amazed me. The game had hundreds of different
+              items, which also{' '}
+              <strong>greatly helped me expand my English vocabulary</strong>.
+              It's still one of my favorite games, and I play it from time to
+              time whenever I have a bit of free time.
+            </p>
+
+            <p>
+              Somewhere along the way, all those interests — logic, puzzles, and
+              building things — made me realize that{' '}
               <strong>engineering</strong> was the path I wanted to follow. So
-              that’s what I did, and it turned out to be a great fit.
+              that's what I did, and it turned out to be a great fit.
             </p>
           </div>
         </div>
@@ -125,7 +149,7 @@ function FooterNote() {
         rel="noopener noreferrer"
         className="animateGradient inline-block cursor-pointer bg-clip-text font-bold text-transparent"
         style={{
-          backgroundImage: `linear-gradient(to right, white,  #218ccf,  white)`,
+          backgroundImage: `linear-gradient(to right, white, #218ccf, white)`,
           backgroundSize: '1000% 100%',
         }}
       >

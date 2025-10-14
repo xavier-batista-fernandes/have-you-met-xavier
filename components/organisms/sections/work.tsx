@@ -24,16 +24,16 @@ export default function Work() {
               loved solving math and physics problems. So, I started researching
               engineering degrees across different universities and found one
               that covered a broad range of fields.{' '}
-              <strong>I applied — and got in.</strong>
+              <strong>I applied, and got in.</strong>
             </p>
             <p>
-              I spent five years (2018–2023) studying{' '}
+              I spent five years (2018–2023){' '}
               <strong>
-                Electrical and Computer Engineering at Instituto Superior
-                Técnico
+                studying Electrical and Computer Engineering at Instituto
+                Superior Técnico
               </strong>
-              . The degree covered a bit of everything — from telecommunications
-              to computer architectures. I met amazing friends there, the kind
+              . The degree covered a bit of everything, from telecommunications
+              to computer architectures. I met amazing friends there—the kind
               you study hard with for exams but also go out and enjoy life with.
               We had the perfect balance.
             </p>
@@ -50,7 +50,7 @@ export default function Work() {
               selected!
             </p>
             <p>
-              That’s how my professional journey began — alongside my master’s
+              That’s how my professional journey began, alongside my master’s
               degree. As a teaching assistant, I guided students through
               programming courses. It was incredibly rewarding to share what I’d
               learned while improving my own skills in the process.
@@ -58,9 +58,10 @@ export default function Work() {
             <p>
               I taught for two years across several courses and met countless
               students. Even today, I occasionally hear a random{' '}
-              <em>”Olá professor!”</em> on the street or a bus. It was a start
-              for my career. I was surrounded by a lot of brilliant minds. Even
-              though I was their teacher, I learned a lot from them too.
+              <em>“Olá professor!”</em> on the street or on a bus. It was the
+              start of my career, and I was surrounded by a lot of brilliant
+              minds. Even though I was their teacher, I learned a lot from them
+              too.
             </p>
           </div>
         </div>
@@ -72,25 +73,32 @@ export default function Work() {
           <div className="flex flex-col gap-6">
             <p>
               Near the end of my master’s, things got hectic. I was writing my
-              thesis, teaching, and - because I like a challenge - started
-              applying for software development jobs.
+              thesis while teaching programming. On top of that, I started
+              applying for software development jobs. In professional terms,
+              let’s just say those days taught me a lot about multitasking.
             </p>
             <p>
               In July 2023, I joined{' '}
-              <strong>Volkswagen Digital Solutions</strong> as a junior
+              <strong>Volkswagen Digital Solutions</strong> as a junior{' '}
               <em>Software Developer</em>. I had first met them at a college job
-              fair, and the interviews went smoothly, thanks to my fresh
-              experience from teaching programming.
+              fair, and the interviews went smoothly thanks to my recent
+              experience teaching programming.
             </p>
             <p>
               <strong>The rest of the story is today.</strong>
             </p>
             <p>
-              I’m now a full-time full stack developer, building products from
-              end to end - from frontend experiences to backend logic. I’ve
-              learned about UI design, responsive interfaces, APIs,
-              authentication, and database architecture. It’s wild how much you
-              don’t learn in college, but it does teach you how to learn.
+              I currently work as a <em>Full Stack Developer</em> at the same
+              company, building internal products used within the organization.{' '}
+              <strong>I work end to end</strong> — from frontend experiences to
+              backend logic. On the frontend side, I’ve learned a lot about UI
+              design, responsive interfaces, design systems, and accessibility.
+              On the backend, I’ve gained experience with APIs, authentication,
+              and database architecture.
+            </p>
+            <p>
+              It’s wild how much you aren’t taught in college,{' '}
+              <strong>but it does teach you how to learn</strong>.
             </p>
           </div>
         </div>
