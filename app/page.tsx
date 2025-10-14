@@ -1,5 +1,4 @@
 import About from '@/components/organisms/sections/about';
-import Blog from '@/components/organisms/sections/blog';
 import Projects from '@/components/organisms/sections/projects';
 import Work from '@/components/organisms/sections/work';
 
@@ -15,9 +14,9 @@ export default function Page() {
       <section id="projects" className="min-h-screen">
         <Projects />
       </section>
-      <section id="blog" className="min-h-screen">
+      {/* <section id="blog" className="min-h-screen">
         <Blog />
-      </section>
+      </section> */}
     </>
   );
 }

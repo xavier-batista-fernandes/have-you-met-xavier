@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { BlogIcon } from '../atoms/icons/blog.icon';
 import { CrossIcon } from '../atoms/icons/cross.icon';
 import { FilesIcon } from '../atoms/icons/files.icon';
 import { HammerIcon } from '../atoms/icons/hammer.icon';
@@ -39,11 +38,11 @@ export function Nav() {
       text: 'Projects',
       iconComponent: <HammerIcon className="h-6 w-6 fill-white" />,
     },
-    {
-      link: '#blog',
-      text: 'Blog',
-      iconComponent: <BlogIcon className="h-6 w-6 fill-white" />,
-    },
+    // {
+    //   link: '#blog',
+    //   text: 'Blog',
+    //   iconComponent: <BlogIcon className="h-6 w-6 fill-white" />,
+    // },
   ];
 
   return (
@@ -66,7 +65,7 @@ export function Nav() {
           {sections.map((section) => (
             <li
               key={section.text}
-              className="transition-colors duration-200 ease-out hover:bg-white/10"
+              className="transition-colors duration-200 ease-out hover:font-bold"
             >
               <Link
                 onClick={() => setIsNavOpen(false)}
