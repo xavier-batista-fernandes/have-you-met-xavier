@@ -14,7 +14,7 @@ export default function Work() {
         </div>
 
         <div>
-          <h2 className="text-lg font-bold text-[#5b5b5b]">
+          <h2 className="my-2 text-lg font-bold text-[#5b5b5b]">
             ABOUT MY COLLEGE YEARS
           </h2>
           <div className="flex flex-col gap-6">
@@ -67,7 +67,7 @@ export default function Work() {
         </div>
 
         <div>
-          <h2 className="text-lg font-bold text-[#5b5b5b]">
+          <h2 className="my-2 text-lg font-bold text-[#5b5b5b]">
             ABOUT MY WORKING YEARS
           </h2>
           <div className="flex flex-col gap-6">

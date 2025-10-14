@@ -17,7 +17,9 @@ export default function About() {
         </div>
 
         <div>
-          <h2 className="text-lg font-bold text-[#5b5b5b]">ABOUT MY ROOTS</h2>
+          <h2 className="my-2 text-lg font-bold text-[#5b5b5b]">
+            ABOUT MY ROOTS
+          </h2>
           <div className="flex flex-col gap-6">
             <p>
               I was born in <strong>Figueira da Foz</strong>, a seaside city in
@@ -83,7 +85,9 @@ export default function About() {
         </div>
 
         <div>
-          <h2 className="text-lg font-bold text-[#5b5b5b]">ABOUT MY HOBBIES</h2>
+          <h2 className="my-2 text-lg font-bold text-[#5b5b5b]">
+            ABOUT MY HOBBIES
+          </h2>
           <div className="flex flex-col gap-6">
             <p>
               In my early teens, my curiosity eventually led me to the{' '}

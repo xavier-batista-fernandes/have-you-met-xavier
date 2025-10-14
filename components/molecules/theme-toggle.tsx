@@ -30,12 +30,12 @@ export function ThemeToggle({ className }: { className?: string }) {
   switch (theme) {
     case 'dark':
       icon = (
-        <SunIcon className="h-8 fill-white transition-transform duration-300 hover:rotate-25" />
+        <SunIcon className="size-6 fill-white transition-transform duration-300 hover:rotate-25" />
       );
       break;
     case 'light':
       icon = (
-        <MoonIcon className="h-8 fill-black transition-transform duration-300 hover:-rotate-25" />
+        <MoonIcon className="size-6 fill-black transition-transform duration-300 hover:-rotate-25" />
       );
       break;
     default:

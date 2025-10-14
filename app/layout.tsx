@@ -2,7 +2,6 @@ import '@/app/globals.css';
 import { ExternalIcon } from '@/components/atoms/icons/external.icon';
 import { MessagesIcon } from '@/components/atoms/icons/messages.icon';
 import { Nav } from '@/components/molecules/nav';
-import { ThemeToggle } from '@/components/molecules/theme-toggle';
 
 import { Libre_Franklin } from 'next/font/google';
 import { cookies } from 'next/headers';
@@ -30,7 +29,6 @@ export default async function RootLayout({
       <body className="bg-amber-50 p-10 text-neutral-900 lg:mx-[20vw] dark:bg-neutral-900 dark:text-amber-50">
         <header className="flex flex-col gap-10 overflow-auto">
           <div className="text-center lg:text-left">
-            <ThemeToggle />
             <h1 className="p-0 text-xl font-extrabold tracking-widest uppercase">
               Xavier Fernandes
             </h1>

@@ -9,7 +9,7 @@ export function PersonIcon({ className }: { className?: string }) {
       fill="#000000"
       transform="matrix(1, 0, 0, 1, 0, 0)rotate(0)"
     >
-      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+      <g id="SVGRepo_bgCarrier"></g>
       <g
         id="SVGRepo_tracerCarrier"
         strokeLinecap="round"
