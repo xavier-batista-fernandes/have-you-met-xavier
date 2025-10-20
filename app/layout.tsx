@@ -27,7 +27,7 @@ export default async function RootLayout({
       </head>
 
       <body
-        className={`${font.className} flex max-h-screen flex-col bg-amber-50 text-neutral-900 dark:bg-neutral-900 dark:text-amber-50`}
+        className={`${font.className} flex max-h-screen flex-col bg-amber-50 text-neutral-900 dark:bg-zinc-900 dark:text-amber-50`}
       >
         <AppContextProvider>
           <header className="relative min-h-20 border-b-[0.5px]">

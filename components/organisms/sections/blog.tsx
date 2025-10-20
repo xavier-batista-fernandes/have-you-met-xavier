@@ -16,15 +16,13 @@ export default function Blog() {
 
       <p className="leading-relaxed">
         You will find me delving into{' '}
-        <strong className="rounded px-1 font-normal text-white">
-          web development
-        </strong>{' '}
+        <strong className="rounded px-1 font-normal">web development</strong>{' '}
         topics I struggled with in the past. Other articles are about{' '}
-        <strong className="rounded px-1 font-normal text-white">
+        <strong className="rounded px-1 font-normal">
           exploring new ideas
         </strong>{' '}
         and{' '}
-        <strong className="rounded px-1 font-normal text-white">
+        <strong className="rounded px-1 font-normal">
           sharing interesting resources
         </strong>
         .
@@ -37,7 +35,7 @@ export default function Blog() {
 
       <p className="text-sm leading-relaxed text-gray-600">
         Oh and by the way: I implemented the whole thing using{' '}
-        <strong className="rounded px-1 text-white">Next.js</strong>!
+        <strong className="rounded px-1">Next.js</strong>!
       </p>
     </div>
   );
