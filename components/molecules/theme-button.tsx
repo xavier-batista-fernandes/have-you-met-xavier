@@ -11,7 +11,7 @@ enum ThemeEnum {
 }
 type Theme = `${ThemeEnum}`;
 
-export function ThemeToggle({ className }: { className?: string }) {
+export function ThemeButton({ className }: { className?: string }) {
   const [theme, setTheme] = useState<Theme | undefined>();
 
   useEffect(() => {
