@@ -144,7 +144,7 @@ export default function About() {
 
 function FooterNote() {
   return (
-    <p className="text-sm leading-relaxed text-gray-600">
+    <p className="text-sm leading-relaxed dark:text-amber-50/75">
       <span className="font-bold">Note:</span> Not sure where{' '}
       <strong>Figueira da Foz</strong> or <strong>Leiria</strong> is? Check out{' '}
       <a
