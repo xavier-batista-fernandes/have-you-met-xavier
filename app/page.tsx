@@ -6,16 +6,16 @@ import Work from '@/components/organisms/sections/work';
 export default function Page() {
   return (
     <>
-      <section id="about" className="min-h-screen">
+      <section id="about">
         <About />
       </section>
-      <section id="work" className="min-h-screen">
+      <section id="work">
         <Work />
       </section>
-      <section id="projects" className="min-h-screen">
+      <section id="projects">
         <Projects />
       </section>
-      <section id="blog" className="min-h-screen">
+      <section id="blog">
         <Blog />
       </section>
     </>

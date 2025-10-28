@@ -1,4 +1,5 @@
 import '@/app/globals.css';
+import { ExternalIcon } from '@/components/atoms/icons/external.icon';
 import { Controls } from '@/components/molecules/controls';
 import { Nav } from '@/components/molecules/nav';
 import { AppContextProvider } from '@/contexts/store';
@@ -47,13 +48,7 @@ export default async function RootLayout({
               </p>
               <div className="pt-2">
                 <hr className="border-t-[0.5px] border-[#4f4f4f]" />
-                <a
-                  href="mailto:fernandesbatistaxavier@gmail.com"
-                  className="flex items-center gap-2 p-3 text-xs transition-colors duration-200 ease-out hover:bg-white/10"
-                >
-                  <MessagesIcon className="h-4 w-4 fill-black dark:fill-white" />
-                  <span>Send me a message!</span>
-                </a>
+                
                 <hr className="border-t-[0.5px] border-[#4f4f4f]" />
               </div>
             </div>
@@ -62,6 +57,34 @@ export default async function RootLayout({
             <div
               className={`${font.className} flex flex-col items-start gap-10`}
             >
+              {/* <img
+                src="/images/cat.webp"
+                alt="An animated cat drinking a cup of coffee."
+                className="mx-auto w-1/2 max-w-[250px] select-none"
+              /> */}
+              <ul className="mt-10 flex w-full flex-col text-sm">
+                <hr className="border-t-[0.5px] border-[#4f4f4f]" />
+                <li className="transition-colors duration-200 ease-out hover:bg-white/10">
+                  <a
+                    href="https://github.com/xavier-batista-fernandes"
+                    className="flex items-center gap-2 px-3 py-3"
+                  >
+                    <ExternalIcon className="h-4 w-4 fill-black dark:fill-white" />
+                    <span>GitHub</span>
+                  </a>
+                </li>
+                <hr className="border-t-[0.5px] border-[#4f4f4f]" />
+                <li className="transition-colors duration-200 ease-out hover:bg-white/10">
+                  <a
+                    href="https://www.linkedin.com/in/xavierbatistafernandes/"
+                    className="flex items-center gap-2 px-3 py-3"
+                  >
+                    <ExternalIcon className="h-4 w-4 fill-black dark:fill-white" />
+                    <span>LinkedIn</span>
+                  </a>
+                </li>
+                <hr className="border-t-[0.5px] border-[#4f4f4f]" />
+              </ul>
               {/* <section className="flex flex-col items-center gap-10">
                 <p className="mt-3 leading-relaxed font-light">
                   <span className="font-bold">
@@ -85,34 +108,24 @@ export default async function RootLayout({
                     them actually come to life, and I invite you to have a look
                     at them!
                   </p>
-                  <ul className="mt-10 flex w-full flex-col text-sm">
-                    <hr className="border-t-[0.5px] border-[#4f4f4f]" />
-                    <li className="transition-colors duration-200 ease-out hover:bg-white/10">
-                      <a
-                        href="https://github.com/xavier-batista-fernandes"
-                        className="flex items-center gap-2 px-3 py-3"
-                      >
-                        <ExternalIcon className="h-4 w-4 fill-black dark:fill-white" />
-                        <span>GitHub</span>
-                      </a>
-                    </li>
-                    <hr className="border-t-[0.5px] border-[#4f4f4f]" />
-                    <li className="transition-colors duration-200 ease-out hover:bg-white/10">
-                      <a
-                        href="https://www.linkedin.com/in/xavierbatistafernandes/"
-                        className="flex items-center gap-2 px-3 py-3"
-                      >
-                        <ExternalIcon className="h-4 w-4 fill-black dark:fill-white" />
-                        <span>LinkedIn</span>
-                      </a>
-                    </li>
-                    <hr className="border-t-[0.5px] border-[#4f4f4f]" />
-                  </ul>
+                 
                 </div>
               </section> */}
             </div>
-            <div className="">{children}</div>
+            <div>{children}</div>
           </main>
+          {/* <footer className="min-h-20 border-t-[0.5px]">
+            This is the end of the page. Thank you for scrolling all the way.
+            <hr className="border-t-[0.5px] border-[#4f4f4f]" />
+            <a
+              href="mailto:fernandesbatistaxavier@gmail.com"
+              className="flex items-center gap-2 p-3 text-xs transition-colors duration-200 ease-out hover:bg-white/10"
+            >
+              <MessagesIcon className="h-4 w-4 fill-black dark:fill-white" />
+              <span>Reach out!</span>
+            </a>
+            <hr className="border-t-[0.5px] border-[#4f4f4f]" />
+          </footer> */}
         </AppContextProvider>
       </body>
     </html>
