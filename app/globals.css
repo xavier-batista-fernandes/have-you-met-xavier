@@ -1,6 +1,15 @@
 @import 'tailwindcss';
 @custom-variant dark (&:where(.dark, .dark *));
 
+* {
+  scrollbar-width: thin;
+  scrollbar-color: oklch(21% 0.006 285.885) transparent;
+}
+
+.dark * {
+  scrollbar-color: oklch(98.7% 0.022 95.277) transparent;
+}
+
 html {
   margin: 0;
   padding: 0;
