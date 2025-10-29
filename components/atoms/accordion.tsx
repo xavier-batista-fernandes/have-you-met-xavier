@@ -34,7 +34,7 @@ export function Accordion({
       <div
         ref={container}
         style={{ height: isExtended ? `${getContainerHeight()}px` : '0' }}
-        className={`overflow-auto transition-[height] duration-500 ease-in-out`}
+        className={`overflow-hidden transition-[height] duration-500 ease-in-out`}
       >
         {content}
       </div>
