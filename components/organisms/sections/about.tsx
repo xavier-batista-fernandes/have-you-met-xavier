@@ -10,7 +10,7 @@ export default function About() {
     <h2 className="my-2 text-lg font-bold text-[#5b5b5b]">ABOUT MY ROOTS</h2>
   );
   const aboutMyRootsContent = (
-    <div className="flex flex-col gap-6">
+    <div className="mb-4 flex flex-col gap-6">
       <p>
         I was born in <strong>Figueira da Foz</strong>, a seaside city in
         Portugal's <strong>Coimbra</strong> district, but grew up a bit further
@@ -74,7 +74,7 @@ export default function About() {
     <h2 className="my-2 text-lg font-bold text-[#5b5b5b]">ABOUT MY HOBBIES</h2>
   );
   const aboutMyHobbiesContent = (
-    <div className="flex flex-col gap-6">
+    <div className="mb-4 flex flex-col gap-6">
       <p>
         In my early teens, my curiosity eventually led me to the{' '}
         <strong>Rubik's Cube</strong>. What started as a random challenge turned
