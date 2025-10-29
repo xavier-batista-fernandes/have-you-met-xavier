@@ -2,7 +2,7 @@ import { FilesIcon } from '@/components/atoms/icons/files.icon';
 
 export default function Work() {
   return (
-    <div className="relative h-full py-10">
+    <div className="relative h-full pt-10">
       <div className="flex flex-col gap-4">
         <div>
           <div className="flex h-10 items-center gap-2">
