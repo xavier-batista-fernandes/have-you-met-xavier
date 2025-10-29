@@ -36,32 +36,11 @@ export default async function RootLayout({
             <Nav />
           </header>
 
-          {/* <div className="sticky top-0 z-300 cursor-pointer border-b-[0.5px] border-neutral-900 bg-amber-50 dark:border-amber-50 dark:bg-neutral-900"></div> */}
-
-          {/* <header className="my-10 w-full flex-col gap-10">
-            <div className="text-center">
-              <h1 className="p-0 text-xl font-extrabold tracking-widest uppercase">
-                Xavier Fernandes
-              </h1>
-              <p className="text-4xl font-bold text-[#ABABAB]">
-                SOFTWARE DEVELOPER
-              </p>
-              <div className="pt-2">
-                <hr className="border-t-[0.5px] border-[#4f4f4f]" />
-                
-                <hr className="border-t-[0.5px] border-[#4f4f4f]" />
-              </div>
-            </div>
-          </header> */}
           <main className="overflow-auto px-10 text-[14px] text-wrap">
             <div
+              id="introduction"
               className={`${font.className} flex flex-col items-start gap-10`}
             >
-              {/* <img
-                src="/images/cat.webp"
-                alt="An animated cat drinking a cup of coffee."
-                className="mx-auto w-1/2 max-w-[250px] select-none"
-              /> */}
               <ul className="mt-10 flex w-full flex-col text-sm">
                 <hr className="border-t-[0.5px] border-[#4f4f4f]" />
                 <li className="transition-colors duration-200 ease-out hover:bg-white/10">

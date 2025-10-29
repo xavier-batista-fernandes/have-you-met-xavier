@@ -33,9 +33,9 @@ export default function Work() {
                 Superior Técnico
               </strong>
               . The degree covered a bit of everything, from telecommunications
-              to computer architectures. I met amazing friends there—the kind
+              to computer architectures. There I met amazing friends, the kind
               you study hard with for exams but also go out and enjoy life with.
-              We had the perfect balance.
+              Our balance was perfect!
             </p>
             <p>
               Out of all the subjects, <strong>computer architectures</strong>{' '}

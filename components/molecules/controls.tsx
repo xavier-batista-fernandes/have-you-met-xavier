@@ -12,16 +12,24 @@ export function Controls() {
   const [isOnTop, setIsOnTop] = useState(true);
 
   useEffect(() => {
-    const onScroll = (event: Event) => {
-      const scrollTop = (event.target as HTMLElement).scrollTop;
-      setIsOnTop(scrollTop === 0);
-    };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        console.log('IntersectionObserver entry:', entry);
+        entry.isIntersecting ? setIsOnTop(true) : setIsOnTop(false);
+      });
+    });
+    const introduction = document.getElementById('introduction');
+    if (!introduction) {
+      console.error(
+        '[Controls] Could not find element with ID "introduction".'
+      );
+      return;
+    }
 
-    const main = document.querySelector('main')! as HTMLElement;
-    main.addEventListener('scroll', onScroll);
+    observer.observe(introduction);
 
     return () => {
-      main.removeEventListener('scroll', onScroll);
+      observer.disconnect();
     };
   }, []);
 
@@ -32,12 +40,16 @@ export function Controls() {
 
   return (
     <div className="absolute top-0 right-0 z-900 flex size-full items-center justify-between px-10">
-      <button
-        onClick={goBackToTop}
-        className={`size-8 cursor-pointer transition-opacity ease-in-out dark:fill-white ${isOnTop ? 'opacity-0' : 'opacity-100'}`}
-      >
-        <ChevronsIcon className={`fill-black dark:fill-white`} />
-      </button>
+      <div className="flex items-center">
+        {!isNavOpen && (
+          <button
+            onClick={goBackToTop}
+            className={`size-8 cursor-pointer transition-opacity duration-300 ease-in-out dark:fill-white ${isOnTop ? 'opacity-0' : 'opacity-100'}`}
+          >
+            <ChevronsIcon className={`fill-black dark:fill-white`} />
+          </button>
+        )}
+      </div>
 
       <div className="flex items-center gap-2">
         <ThemeButton className="cursor-pointer" />
