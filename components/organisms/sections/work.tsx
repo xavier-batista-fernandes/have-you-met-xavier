@@ -20,8 +20,8 @@ export default function Work() {
           <div className="flex flex-col gap-6">
             <p>
               As the college application deadline approached, I still wasn’t
-              sure what I wanted to study. The only thing I knew was that I
-              loved solving math and physics problems. So, I started researching
+              sure what I wanted to study, but I was really good and interested
+              in solving math and physics problems. So, I started researching
               engineering degrees across different universities and found one
               that covered a broad range of fields.{' '}
               <strong>I applied, and got in.</strong>
@@ -46,14 +46,15 @@ export default function Work() {
             <p>
               I performed well in programming-related courses, and one day some
               of my professors encouraged me to apply for a{' '}
-              <em>Teaching Assistant</em> position. I was lucky enough to be
-              selected!
+              <em>Teaching Assistant</em> position. A recommendation letter was
+              written, and I was one of the lucky ones whose application was
+              accepted.
             </p>
             <p>
-              That’s how my professional journey began, alongside my master’s
-              degree. As a teaching assistant, I guided students through
-              programming courses. It was incredibly rewarding to share what I’d
-              learned while improving my own skills in the process.
+              That’s how my professional journey began - alongside my master’s
+              degree. My calendar was a mixture of classes I attended as a
+              student and classes I taught as a teaching assistant. I guided
+              students through programming courses.
             </p>
             <p>
               I taught for two years across several courses and met countless
@@ -73,16 +74,17 @@ export default function Work() {
           <div className="flex flex-col gap-6">
             <p>
               Near the end of my master’s, things got hectic. I was writing my
-              thesis while teaching programming. On top of that, I started
+              thesis while teaching programming classes, vigilating final exams
+              and evaluating 80+ students' exams. On top of that, I started
               applying for software development jobs. In professional terms,
               let’s just say those days taught me a lot about multitasking.
             </p>
             <p>
               In July 2023, I joined{' '}
               <strong>Volkswagen Digital Solutions</strong> as a junior{' '}
-              <em>Software Developer</em>. I had first met them at a college job
-              fair, and the interviews went smoothly thanks to my recent
-              experience teaching programming.
+              <em>Software Developer</em>. I had first met the company at a
+              college job fair, and the interviews went smoothly thanks to my
+              recent experience teaching programming.
             </p>
             <p>
               <strong>The rest of the story is today.</strong>
