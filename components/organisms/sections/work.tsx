@@ -4,7 +4,7 @@ import { FilesIcon } from '@/components/atoms/icons/files.icon';
 export default function Work() {
   // About my college years
   const aboutMyCollegeYearsHeader = (
-    <h2 className="my-2 text-lg font-bold text-[#5b5b5b]">
+    <h2 className="my-2 text-lg font-bold text-[#5b5b5b] dark:text-amber-50/75">
       ABOUT MY COLLEGE YEARS
     </h2>
   );
@@ -57,7 +57,7 @@ export default function Work() {
 
   // About my working years
   const aboutMyWorkingYearsHeader = (
-    <h2 className="my-2 text-lg font-bold text-[#5b5b5b]">
+    <h2 className="my-2 text-lg font-bold text-[#5b5b5b] dark:text-amber-50/75">
       ABOUT MY WORKING YEARS
     </h2>
   );

@@ -1,4 +1,3 @@
-// TODO: Have project details slide to the left side! Moving the whole deck a bit to the right.
 'use client';
 
 import { ArrowLoadingIcon } from '@/components/atoms/icons/arrow-loading.icon';
@@ -7,14 +6,13 @@ import { HammerIcon } from '@/components/atoms/icons/hammer.icon';
 import { PaperClipIcon } from '@/components/atoms/icons/paper-clip.icon';
 import { useDragScroll } from '@/hooks/use-drag-scroll';
 
-// For mobile this could be a modal.
 export default function Projects() {
   return (
     <div className="h-full max-w-screen overflow-y-scroll py-10">
       <div className="flex h-10 items-center gap-2">
-        <HammerIcon className="h-full fill-black dark:fill-black dark:fill-white" />
+        <HammerIcon className="h-full fill-black dark:fill-white" />
         <h1 className="text-[min(4vw,_2rem)] font-bold">
-          WHAT I HAVE BEEN UP TO.
+          WHAT I HAVE BEEN UP TO
         </h1>
       </div>
       <p className="mt-5">
@@ -23,7 +21,6 @@ export default function Projects() {
         that I would like to implement. Some of them actually come to life, and
         I invite you to have a look at them!
       </p>
-      <Timeline />
     </div>
   );
 }
