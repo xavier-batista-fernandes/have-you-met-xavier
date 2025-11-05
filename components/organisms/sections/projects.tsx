@@ -11,8 +11,8 @@ export default function Projects() {
     <div className="h-full max-w-screen overflow-y-scroll py-10">
       <div className="flex h-10 items-center gap-2">
         <HammerIcon className="h-full fill-black dark:fill-white" />
-        <h1 className="text-[min(4vw,_2rem)] font-bold">
-          WHAT I HAVE BEEN UP TO
+        <h1 className="text-[min(4vw,2rem)] font-bold">
+          WHAT I HAVE BEEN UP TO.
         </h1>
       </div>
       <p className="mt-5">

@@ -100,8 +100,8 @@ export default function Work() {
       <div>
         <div className="flex h-10 items-center gap-2">
           <FilesIcon className="h-full fill-black dark:fill-white" />
-          <h1 className="text-[min(4vw,_2rem)] font-bold">
-            MY JOURNEY AS AN ENGINEER
+          <h1 className="text-[min(4vw,2rem)] font-bold">
+            MY JOURNEY AS AN ENGINEER.
           </h1>
         </div>
       </div>

@@ -5,7 +5,7 @@ export default function Blog() {
     <div className="flex flex-col gap-4 py-10">
       <div className="flex h-10 items-center gap-2">
         <BlogIcon className="h-full fill-black dark:fill-white" />
-        <h1 className="text-[min(4vw,_2rem)] font-bold">I HAVE A BLOG.</h1>
+        <h1 className="text-[min(4vw,2rem)] font-bold">I HAVE A BLOG.</h1>
       </div>
 
       <p className="leading-relaxed font-light">
