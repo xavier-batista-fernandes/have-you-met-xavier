@@ -77,9 +77,6 @@ export default function Work() {
         experience teaching programming.
       </p>
       <p>
-        <strong>The rest of the story is today.</strong>
-      </p>
-      <p>
         I currently work as a <em>Full Stack Developer</em> at the same company,
         building internal products used within the organization.{' '}
         <strong>I work end to end</strong> — from frontend experiences to
@@ -87,6 +84,16 @@ export default function Work() {
         responsive interfaces, design systems, and accessibility. On the
         backend, I’ve gained experience with APIs, authentication, and database
         architecture.
+      </p>
+      <p>
+        After six months, I started getting involved in the recruitment process
+        and began mentoring new hires. I’ve shown them around the office,
+        explained how things work, and helped them fit in. For the people
+        joining my team, I’ve been in charge of onboarding and making sure
+        they’ve got everything they need to get started.
+      </p>
+      <p>
+        <strong>The rest of the story is today.</strong>
       </p>
       <p>
         It’s wild how much you aren’t taught in college,{' '}
