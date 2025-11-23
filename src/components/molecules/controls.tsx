@@ -1,6 +1,6 @@
 'use client';
 
-import { useAppContext } from '@/contexts/store';
+import { useAppContext } from '@/src/contexts/store';
 import { useEffect, useState } from 'react';
 import { ChevronsIcon } from '../atoms/icons/chevrons.icon';
 import { CrossIcon } from '../atoms/icons/cross.icon';

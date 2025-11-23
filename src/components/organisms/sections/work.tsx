@@ -1,5 +1,5 @@
-import { Accordion } from '@/components/atoms/accordion';
-import { FilesIcon } from '@/components/atoms/icons/files.icon';
+import { Accordion } from '@/src/components/atoms/accordion';
+import { FilesIcon } from '@/src/components/atoms/icons/files.icon';
 
 export default function Work() {
   // About my college years

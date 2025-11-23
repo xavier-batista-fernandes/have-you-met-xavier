@@ -1,7 +1,7 @@
-import About from '@/components/organisms/sections/about';
-import Blog from '@/components/organisms/sections/blog';
-import Projects from '@/components/organisms/sections/projects';
-import Work from '@/components/organisms/sections/work';
+import About from '@/src/components/organisms/sections/about';
+import Blog from '@/src/components/organisms/sections/blog';
+import Projects from '@/src/components/organisms/sections/projects';
+import Work from '@/src/components/organisms/sections/work';
 
 export default function Page() {
   return (

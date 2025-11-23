@@ -1,8 +1,8 @@
 'use client';
 
-import { Accordion } from '@/components/atoms/accordion';
-import { PersonIcon } from '@/components/atoms/icons/person.icon';
-import { TERRAS_LUSAS_URL } from '@/lib/constants/pages';
+import { Accordion } from '@/src/components/atoms/accordion';
+import { PersonIcon } from '@/src/components/atoms/icons/person.icon';
+import { TERRAS_LUSAS_URL } from '@/src/lib/constants/pages';
 
 export default function About() {
   // About my roots

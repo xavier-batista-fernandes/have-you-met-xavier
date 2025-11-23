@@ -1,4 +1,4 @@
-import { BlogIcon } from '@/components/atoms/icons/blog.icon';
+import { BlogIcon } from '@/src/components/atoms/icons/blog.icon';
 
 export default function Blog() {
   return (

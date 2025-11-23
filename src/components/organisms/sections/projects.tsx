@@ -1,10 +1,11 @@
 'use client';
 
-import { ArrowLoadingIcon } from '@/components/atoms/icons/arrow-loading.icon';
-import { BoxArrowInIcon } from '@/components/atoms/icons/box-arrow-in.icon';
-import { HammerIcon } from '@/components/atoms/icons/hammer.icon';
-import { PaperClipIcon } from '@/components/atoms/icons/paper-clip.icon';
-import { useDragScroll } from '@/hooks/use-drag-scroll';
+import { ArrowLoadingIcon } from '@/src/components/atoms/icons/arrow-loading.icon';
+import { BoxArrowInIcon } from '@/src/components/atoms/icons/box-arrow-in.icon';
+import { HammerIcon } from '@/src/components/atoms/icons/hammer.icon';
+import { InformationIcon } from '@/src/components/atoms/icons/information.icon';
+import { PaperClipIcon } from '@/src/components/atoms/icons/paper-clip.icon';
+import { useDragScroll } from '@/src/hooks/use-drag-scroll';
 
 export default function Projects() {
   return (
@@ -21,6 +22,43 @@ export default function Projects() {
         that I would like to implement. Some of them actually come to life, and
         I invite you to have a look at them!
       </p>
+      <div className="my-8 flex flex-col items-start gap-4">
+        <div className="flex h-48 items-start gap-10">
+          <div className="flex h-full flex-col gap-2">
+            <div className="ml-2 flex cursor-pointer items-center gap-2 text-2xl">
+              <InformationIcon className="size-6 fill-amber-50" />
+              <span>2025</span>
+            </div>
+            <div className="ml-5 w-px grow bg-amber-100"></div>
+          </div>
+          <div>
+            <p className="cursor-pointer">Terras Lusas</p>
+            <p className="cursor-pointer">Lunch Tram</p>
+            <p className="cursor-pointer">Blog</p>
+          </div>
+        </div>
+
+        <div className="flex h-48 items-start gap-10">
+          <div className="flex h-full flex-col gap-2">
+            <div className="cursor-pointer text-2xl">2024</div>
+            <div className="ml-5 w-px grow bg-amber-100"></div>
+          </div>
+          <div>
+            <p className="cursor-pointer">Rubik's Rush</p>
+            <p className="cursor-pointer">Lunch Tram</p>
+          </div>
+        </div>
+        <div className="flex h-48 items-start gap-10">
+          <div className="flex h-full flex-col gap-2">
+            <div className="cursor-pointer text-2xl">College</div>
+            <div className="ml-5 w-px grow bg-amber-100"></div>
+          </div>
+          <div>
+            <p className="cursor-pointer">Rubik's Rush</p>
+            <p className="cursor-pointer">Lunch Tram</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

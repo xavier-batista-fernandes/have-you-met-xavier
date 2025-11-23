@@ -1,6 +1,6 @@
 'use client';
 
-import { useAppContext } from '@/contexts/store';
+import { useAppContext } from '@/src/contexts/store';
 import Link from 'next/link';
 import { useEffect } from 'react';
 import { BlogIcon } from '../atoms/icons/blog.icon';

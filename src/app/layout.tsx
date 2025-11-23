@@ -1,8 +1,8 @@
-import '@/app/globals.css';
-import { ExternalIcon } from '@/components/atoms/icons/external.icon';
-import { Controls } from '@/components/molecules/controls';
-import { Nav } from '@/components/molecules/nav';
-import { AppContextProvider } from '@/contexts/store';
+import '@/src/app/globals.css';
+import { ExternalIcon } from '@/src/components/atoms/icons/external.icon';
+import { Controls } from '@/src/components/molecules/controls';
+import { Nav } from '@/src/components/molecules/nav';
+import { AppContextProvider } from '@/src/contexts/store';
 
 import { Libre_Franklin } from 'next/font/google';
 import { cookies } from 'next/headers';
