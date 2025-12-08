@@ -99,7 +99,9 @@ export default function Projects() {
     <div className="h-full max-w-screen overflow-y-scroll py-10">
       <div className="flex h-10 items-center gap-2">
         <HammerIcon className="h-full fill-black dark:fill-white" />
-        <h1 className="text-[min(4vw,2rem)]">WHAT I HAVE BEEN UP TO.</h1>
+        <h1 className="text-[min(4vw,2rem)] font-bold">
+          WHAT I HAVE BEEN UP TO.
+        </h1>
       </div>
       <p className="mt-5">
         I'm a coffee lover. They do say that developers are machines that turn
@@ -112,10 +114,10 @@ export default function Projects() {
         style={{ scrollbarWidth: 'none' }}
       >
         {projects.map(({ id, header, content }) => (
-          <>
-            <Accordion key={id} header={header} content={content}></Accordion>
+          <div key={id} className="">
+            <Accordion header={header} content={content}></Accordion>
             <hr className="h-[0.5px] bg-amber-300" />
-          </>
+          </div>
         ))}
       </div>
     </div>
