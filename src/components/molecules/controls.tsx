@@ -13,10 +13,7 @@ export function Controls() {
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        console.log('IntersectionObserver entry:', entry);
-        entry.isIntersecting ? setIsOnTop(true) : setIsOnTop(false);
-      });
+      entries.forEach((entry) => setIsOnTop(entry.isIntersecting));
     });
     const introduction = document.getElementById('introduction');
     if (!introduction) {

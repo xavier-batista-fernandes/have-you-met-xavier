@@ -35,9 +35,9 @@ export default function Work() {
       </p>
       <p>
         I performed well in programming-related courses, and one day some of my
-        professors encouraged me to apply for a <em>Teaching Assistant</em>{' '}
-        position. A recommendation letter was written, and I was one of the
-        lucky ones whose application was accepted.
+        professors encouraged me to apply for a Teaching Assistant position. A
+        recommendation letter was written, and I was one of the lucky ones whose
+        application was accepted.
       </p>
       <p>
         That’s how my professional journey began - alongside my master’s degree.
@@ -77,8 +77,9 @@ export default function Work() {
         experience teaching programming.
       </p>
       <p>
-        I currently work as a <em>Full Stack Developer</em> at the same company,
-        building internal products used within the organization.{' '}
+        I currently work as a Software Developer at the same company, building
+        internal products used within the organization.
+        <br />
         <strong>I work end to end</strong> — from frontend experiences to
         backend logic. On the frontend side, I’ve learned a lot about UI design,
         responsive interfaces, design systems, and accessibility. On the
@@ -86,14 +87,18 @@ export default function Work() {
         architecture.
       </p>
       <p>
-        After six months, I started getting involved in the recruitment process
-        and began mentoring new hires. I’ve shown them around the office,
-        explained how things work, and helped them fit in. For the people
-        joining my team, I’ve been in charge of onboarding and making sure
-        they’ve got everything they need to get started.
+        After six months,{' '}
+        <strong>
+          I started getting involved in the recruitment process and began
+          mentoring new hires
+        </strong>
+        . I’ve shown them around the office, explained how things work, and
+        helped them fit in. For the people joining my team, I’ve been in charge
+        of onboarding and making sure they’ve got everything they need to get
+        started.
       </p>
       <p>
-        <strong>The rest of the story is today.</strong>
+        <strong>The rest of the story is today</strong>.
       </p>
       <p>
         It’s wild how much you aren’t taught in college,{' '}

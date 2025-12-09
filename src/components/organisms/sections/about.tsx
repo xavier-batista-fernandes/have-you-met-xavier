@@ -112,7 +112,18 @@ export default function About() {
         absolutely amazed me. The game had hundreds of different items, which
         also <strong>greatly helped me expand my English vocabulary</strong>.
         It's still one of my favorite games, and I play it from time to time
-        whenever I have a bit of free time.
+        whenever I have a bit of free time. But the craziest part of it is that
+        you could build circuits with this thing called <em>redstone</em>. I
+        first learned about logic gates here, years before hearing it in
+        college.
+      </p>
+      <p>
+        Then there's the whole world of <strong>board games</strong>. What is
+        there not to love? Back in school, my friends and I would stay late at
+        night at our local coffee place playing them. We often tried playing new
+        ones, but we always came back to <em>Catan</em>. Over time, we all
+        became dangerously good at it, and there were even days when we squeezed
+        in a match between classes or right before catching the school bus home.
       </p>
 
       <p>
