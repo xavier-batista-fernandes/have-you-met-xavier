@@ -39,9 +39,23 @@ export default async function RootLayout({
           <main className="overflow-auto px-10 text-[14px] text-wrap">
             <div
               id="introduction"
-              className={`${font.className} flex flex-col items-start gap-10`}
+              className={`${font.className} flex flex-col items-center gap-6`}
             >
-              <ul className="mt-10 flex w-full flex-col text-sm">
+              <div className="mt-12 size-1/2 overflow-hidden rounded-full border dark:border-amber-50">
+                <img src="xavier.png" className="" />
+              </div>
+              <div>
+                <h1 className="text-center text-2xl font-bold uppercase">
+                  Xavier Fernandes
+                </h1>
+                <p className="mt-2 text-center">
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium, totam rem aperiam, eaque
+                  ipsa quae ab illo inventore veritatis et quasi architecto
+                  beatae vitae dicta sunt explicabo.
+                </p>
+              </div>
+              <ul className="flex w-full flex-col text-sm">
                 <hr className="border-t-[0.5px] border-[#4f4f4f]" />
                 <li className="transition-colors duration-200 ease-out hover:bg-white/10">
                   <a

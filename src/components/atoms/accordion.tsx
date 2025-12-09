@@ -1,21 +1,26 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { CrossIcon } from './icons/cross.icon';
 
 export function Accordion({
+  startsExtended = false,
   header,
   content,
 }: {
+  startsExtended?: boolean;
   header?: React.ReactNode;
   content?: React.ReactNode;
 }) {
   const container = useRef<HTMLDivElement>(null);
-  const [isExtended, setIsExtended] = useState(false);
+  const [isExtended, setIsExtended] = useState(startsExtended);
+  const [containerHeight, setContainerHeight] = useState(0);
 
-  function getContainerHeight() {
-    return container.current ? container.current.scrollHeight : 0;
-  }
+  // Whenever the accordion is extended or collapsed, the true height of the content container is recalculated and updated.
+  useEffect(() => {
+    const height = container.current ? container.current.scrollHeight : 0;
+    setContainerHeight(height);
+  }, [isExtended]);
 
   return (
     <div>
@@ -33,7 +38,7 @@ export function Accordion({
       {/* Accordion's Content / Panel */}
       <div
         ref={container}
-        style={{ height: isExtended ? `${getContainerHeight()}px` : '0' }}
+        style={{ height: isExtended ? `${containerHeight}px` : '0' }}
         className={`overflow-hidden transition-[height] duration-500 ease-in-out`}
       >
         {content}

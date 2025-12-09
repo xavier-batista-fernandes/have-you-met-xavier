@@ -141,6 +141,12 @@ export default function About() {
         <PersonIcon className="h-full fill-black dark:fill-white" />
         <h1 className="text-[min(4vw,2rem)] font-bold">HAVE YOU MET ME?</h1>
       </div>
+      <p className="mt-2">
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+        explicabo.
+      </p>
 
       <div className="mt-2">
         <Accordion

@@ -116,6 +116,12 @@ export default function Work() {
             MY JOURNEY AS AN ENGINEER.
           </h1>
         </div>
+        <p className="mt-2">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+          ab illo inventore veritatis et quasi architecto beatae vitae dicta
+          sunt explicabo.
+        </p>
       </div>
 
       <div className="mt-2">
