@@ -7,7 +7,7 @@ import { TERRAS_LUSAS_URL } from '@/src/lib/constants/pages';
 export default function About() {
   // About my roots
   const aboutMyRootsHeader = (
-    <h2 className="my-2 text-lg font-bold text-[#5b5b5b] dark:text-amber-50/75">
+    <h2 className="my-2 text-left text-lg font-bold text-[#5b5b5b] dark:text-amber-50/75">
       ABOUT MY ROOTS
     </h2>
   );
@@ -73,7 +73,7 @@ export default function About() {
 
   // About my hobbies
   const aboutMyHobbiesHeader = (
-    <h2 className="my-2 text-lg font-bold text-[#5b5b5b] dark:text-amber-50/75">
+    <h2 className="my-2 text-left text-lg font-bold text-[#5b5b5b] dark:text-amber-50/75">
       ABOUT MY HOBBIES
     </h2>
   );

@@ -21,13 +21,13 @@ export function Accordion({
     <div>
       {/* Accordion's Header / Trigger */}
       <button
-        className="flex cursor-pointer flex-row-reverse items-center gap-2"
+        className="flex w-full cursor-pointer items-center gap-2"
         onClick={() => setIsExtended(!isExtended)}
       >
-        {header}
         <CrossIcon
           className={`size-6 transition-transform ${isExtended ? '' : 'rotate-45'} fill-black dark:fill-white`}
         />
+        <div className="grow">{header}</div>
       </button>
 
       {/* Accordion's Content / Panel */}

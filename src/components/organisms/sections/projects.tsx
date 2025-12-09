@@ -1,96 +1,56 @@
 'use client';
 
 import { HammerIcon } from '@/src/components/atoms/icons/hammer.icon';
+import { SPROUTALIS_URL, TERRAS_LUSAS_URL } from '@/src/lib/constants/pages';
 import { Accordion } from '../../atoms/accordion';
+import { ExternalIcon } from '../../atoms/icons/external.icon';
 
 export default function Projects() {
   const projects = [
     {
       id: 'sproutalis',
-      url: 'https://sproutalis.vercel.app',
-      header: (
-        <h2 className="my-1 text-lg text-[#5b5b5b] dark:text-amber-50/75">
-          Sproutalis - <span className="text-sm">2026</span>
-        </h2>
-      ),
+      header: 'Sproutalis',
+      url: SPROUTALIS_URL,
       content: (
-        <div>
-          <a
-            className="block text-sm font-bold text-amber-600 dark:text-amber-200"
-            href="https://sproutalis.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            https://sproutalis.vercel.app
-          </a>
-          <p className="mt-4">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-            eos qui ratione voluptatem sequi nesciunt.
-          </p>
-        </div>
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+          ab illo inventore veritatis et quasi architecto beatae vitae dicta
+          sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
+          qui ratione voluptatem sequi nesciunt.
+        </p>
       ),
     },
     {
       id: 'terras-lusas',
-      url: 'https://terras-lusas.vercel.app',
-      header: (
-        <h2 className="my-1 text-lg text-[#5b5b5b] dark:text-amber-50/75">
-          Terras Lusas - <span className="text-sm">2025</span>
-        </h2>
-      ),
+      url: TERRAS_LUSAS_URL,
+      header: 'Terras Lusas',
       content: (
-        <div>
-          <a
-            className="block text-sm font-bold text-amber-600 dark:text-amber-200"
-            href="https://terras-lusas.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            https://terras-lusas.vercel.app
-          </a>
-          <p className="mt-4">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-            eos qui ratione voluptatem sequi nesciunt.
-          </p>
-        </div>
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+          ab illo inventore veritatis et quasi architecto beatae vitae dicta
+          sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
+          qui ratione voluptatem sequi nesciunt.
+        </p>
       ),
     },
 
     {
       id: 'rubiks-rush',
       url: 'https://rubiks-rush.vercel.app',
-      header: (
-        <h2 className="my-1 text-lg text-[#5b5b5b] dark:text-amber-50/75">
-          Rubik's Rush - <span className="text-sm">2024</span>
-        </h2>
-      ),
+      header: "Rubik's Rush",
       content: (
-        <div>
-          <a
-            className="block text-sm font-bold text-amber-600 dark:text-amber-200"
-            href="https://rubiks-rush.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            https://rubiks-rush.vercel.app
-          </a>
-          <p className="mt-4">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-            eos qui ratione voluptatem sequi nesciunt.
-          </p>
-        </div>
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+          ab illo inventore veritatis et quasi architecto beatae vitae dicta
+          sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
+          qui ratione voluptatem sequi nesciunt.
+        </p>
       ),
     },
   ];
@@ -110,56 +70,36 @@ export default function Projects() {
         I invite you to have a look at them!
       </p>
       <div
-        className="mt-10 flex w-full flex-col gap-2 overflow-auto"
+        className="mt-10 flex w-full flex-col overflow-auto"
         style={{ scrollbarWidth: 'none' }}
       >
-        {projects.map(({ id, header, content }) => (
-          <div key={id} className="">
-            <Accordion header={header} content={content}></Accordion>
-            <hr className="h-[0.5px] bg-amber-300" />
+        {projects.map(({ id, url, header, content }) => (
+          <div key={id} className="w-full p-2 not-last:border-b-[0.5px]">
+            <Accordion
+              header={
+                <h2 className="my-1 flex w-full items-center justify-between text-lg dark:text-amber-50/75">
+                  {header}
+                  <span className="text-sm">2026</span>
+                </h2>
+              }
+              content={
+                <div className="">
+                  <a
+                    className="flex items-center gap-1 text-base font-bold text-amber-600 dark:text-amber-200"
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span>{url}</span>
+                    <ExternalIcon className="size-4 fill-amber-600 dark:fill-amber-200" />
+                  </a>
+                  <div className="py-3">{content}</div>
+                </div>
+              }
+            ></Accordion>
           </div>
         ))}
       </div>
     </div>
   );
-}
-
-{
-  /* <div className="my-8 flex flex-col items-start gap-4">
-  <div className="flex h-48 items-start gap-10">
-    <div className="flex h-full flex-col gap-2">
-      <div className="ml-2 flex cursor-pointer items-center gap-2 text-2xl">
-        <InformationIcon className="size-6 fill-amber-50" />
-        <span>2025</span>
-      </div>
-      <div className="ml-5 w-px grow bg-amber-100"></div>
-    </div>
-    <div>
-      <p className="cursor-pointer">Terras Lusas</p>
-      <p className="cursor-pointer">Lunch Tram</p>
-      <p className="cursor-pointer">Blog</p>
-    </div>
-  </div>
-
-  <div className="flex h-48 items-start gap-10">
-    <div className="flex h-full flex-col gap-2">
-      <div className="cursor-pointer text-2xl">2024</div>
-      <div className="ml-5 w-px grow bg-amber-100"></div>
-    </div>
-    <div>
-      <p className="cursor-pointer">Rubik's Rush</p>
-      <p className="cursor-pointer">Lunch Tram</p>
-    </div>
-  </div>
-  <div className="flex h-48 items-start gap-10">
-    <div className="flex h-full flex-col gap-2">
-      <div className="cursor-pointer text-2xl">College</div>
-      <div className="ml-5 w-px grow bg-amber-100"></div>
-    </div>
-    <div>
-      <p className="cursor-pointer">Rubik's Rush</p>
-      <p className="cursor-pointer">Lunch Tram</p>
-    </div>
-  </div>
-</div>; */
 }
