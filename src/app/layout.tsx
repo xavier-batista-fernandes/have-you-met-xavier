@@ -46,7 +46,7 @@ export default async function RootLayout({
                 <p className="mt-2 max-w-xl">
                   Nice to see you wandering this far across the internet. Here,
                   you will get to know me a tiny bit better, as I share notes
-                  about both my <strong>personal</strong> and my{' '}
+                  about both my <strong>personal</strong> and{' '}
                   <strong>professional</strong> adventures.
                 </p>
               </div>
@@ -56,7 +56,7 @@ export default async function RootLayout({
               </div>
 
               <div>
-                <h3 className="text-2xl font-thin uppercase">
+                <h3 className="text-2xl font-bold uppercase">
                   Xavier Fernandes
                 </h3>
 
@@ -69,7 +69,7 @@ export default async function RootLayout({
               <div className="mt-6 w-full">
                 <p className="p-3 text-start">
                   <span className="font-bold">
-                    Do you want to stay in touch?
+                    Do you want to get in touch?
                   </span>
                   <br />
                   <span className="text-sm">

@@ -3,6 +3,7 @@
 import { Accordion } from '@/src/components/atoms/accordion';
 import { PersonIcon } from '@/src/components/atoms/icons/person.icon';
 import { TERRAS_LUSAS_URL } from '@/src/lib/constants/pages';
+import { differenceInYears } from 'date-fns';
 
 export default function About() {
   return (
@@ -12,8 +13,8 @@ export default function About() {
         <h1 className="text-[min(4vw,2rem)] font-bold">HAVE YOU MET ME?</h1>
       </div>
       <p className="mt-2">
-        I’m a {new Date().getFullYear() - 2000}-year-old{' '}
-        <strong>Software Developer</strong> from Portugal, currently moving
+        I'm a {differenceInYears(new Date(), new Date('2000-07-15'))}-year-old{' '}
+        <strong>Software Developer</strong> from Portugal, currently jumping
         between Lisbon and Leiria. During my college years, I developed a strong
         interest in building things for the web, chasing curiosity through side
         projects, and learning for the sheer joy of it. Outside of code, I spend
