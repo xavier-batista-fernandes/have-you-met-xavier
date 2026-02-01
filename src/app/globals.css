@@ -41,6 +41,24 @@ html {
   }
 }
 
+@keyframes animate-swing {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(25deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  75% {
+    transform: rotate(-25deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
 @keyframes animate-rotate {
   0% {
     transform: rotate(0);
@@ -61,6 +79,13 @@ html {
   animation-name: animate-sway;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.animateSwing {
+  animation-name: animate-swing;
+  animation-duration: 2s;
+  animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 

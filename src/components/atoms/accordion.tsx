@@ -26,11 +26,12 @@ export function Accordion({
     <div>
       {/* Accordion's Header / Trigger */}
       <button
-        className="flex w-full cursor-pointer items-center gap-2"
+        className="group flex w-full cursor-pointer items-center gap-2"
         onClick={() => setIsExtended(!isExtended)}
       >
+        {/* FIXME: TailwindCSS does not support group-hover with animation classes. */}
         <CrossIcon
-          className={`size-6 transition-transform ${isExtended ? '' : 'rotate-45'} fill-black dark:fill-white`}
+          className={`size-6 transition-transform ${isExtended ? '' : 'group-hover:animateSwing rotate-45'} fill-black dark:fill-white`}
         />
         <div className="grow">{header}</div>
       </button>

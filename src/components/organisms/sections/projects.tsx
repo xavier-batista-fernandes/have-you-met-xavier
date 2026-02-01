@@ -11,7 +11,7 @@ export default function Projects() {
       id: 'sproutalis',
       header: 'Sproutalis',
       url: SPROUTALIS_URL,
-      year: 2025,
+      date: 'September 2025',
       content: (
         <p>
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -27,7 +27,7 @@ export default function Projects() {
       id: 'terras-lusas',
       url: TERRAS_LUSAS_URL,
       header: 'Terras Lusas',
-      year: 2024,
+      date: 'July 2024',
       content: (
         <p>
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -44,7 +44,7 @@ export default function Projects() {
       id: 'rubiks-rush',
       url: 'https://rubiks-rush.vercel.app',
       header: "Rubik's Rush",
-      year: 2023,
+      date: 'August 2023',
       content: (
         <p>
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -68,22 +68,26 @@ export default function Projects() {
       </div>
 
       <p className="mt-2">
-        I'm a coffee lover. They do say that developers are machines that turn
-        coffee into code. That's me: I have a thousand of new ideas in my mind
+        I am a bit of a coffee addict... But only because developers are
+        machines that need fuel (also known as coffee) to turn ideas into code!
+        <br />
+        <strong>That's me:</strong> I have a thousand of new ideas in my mind
         that I would like to implement. Some of them actually come to life, and
         I invite you to have a look at them!
       </p>
+
       <div
         className="mt-10 flex w-full flex-col overflow-auto"
         style={{ scrollbarWidth: 'none' }}
       >
-        {projects.map(({ id, url, year, header, content }) => (
+        {projects.map(({ id, url, date, header, content }) => (
           <div key={id} className="w-full p-2 not-last:border-b-[0.5px]">
             <Accordion
               header={
-                <h2 className="my-1 flex w-full items-center justify-between text-lg dark:text-amber-50/75">
-                  {header}
-                  <span className="text-sm">{year}</span>
+                <h2 className="my-1 flex w-full items-center justify-between gap-4 dark:text-amber-50/75">
+                  <span className="font-bold">{header}</span>
+                  <div className="grow border-t border-dashed border-amber-600 dark:border-amber-200"></div>
+                  <span className="text-sm">{date}</span>
                 </h2>
               }
               content={

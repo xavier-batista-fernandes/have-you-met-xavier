@@ -98,11 +98,8 @@ export default function Work() {
         started.
       </p>
       <p>
-        <strong>The rest of the story is today</strong>.
-      </p>
-      <p>
-        It’s wild how much you aren’t taught in college,{' '}
-        <strong>but it does teach you how to learn</strong>.
+        <strong>The rest of the story is today</strong>. It’s wild how much you
+        aren’t taught in college, but it does teach you how to learn.
       </p>
     </div>
   );
@@ -117,10 +114,14 @@ export default function Work() {
           </h1>
         </div>
         <p className="mt-2">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-          ab illo inventore veritatis et quasi architecto beatae vitae dicta
-          sunt explicabo.
+          My professional journey started during college as a teaching
+          assistant, guiding students through programming courses. Today, I’m a{' '}
+          <strong>Software Developer at Volkswagen Digital Solutions</strong>,
+          where I work end-to-end — from designing front-end interfaces to
+          building backend systems. Along the way, I’ve mentored new teammates,
+          tackled challenging projects, and learned how much more there is to
+          discover every day. Here’s a closer look at my journey, from college
+          to the work I do now.
         </p>
       </div>
 

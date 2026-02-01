@@ -28,7 +28,7 @@ export default async function RootLayout({
       </head>
 
       <body
-        className={`${font.className} mx-auto flex max-h-dvh max-w-3xl flex-col bg-amber-50 text-neutral-900 md:border-x-[0.5px] dark:bg-zinc-900 dark:text-amber-50 md:dark:border-amber-50`}
+        className={`${font.className} mx-auto flex max-h-dvh max-w-3xl flex-col bg-amber-50 text-neutral-900 transition-colors md:border-x-[0.5px] dark:bg-zinc-900 dark:text-amber-50 md:dark:border-amber-50`}
       >
         <AppContextProvider>
           <header className="relative min-h-20 border-b-[0.5px]">
@@ -39,45 +39,69 @@ export default async function RootLayout({
           <main className="overflow-auto px-10 text-[14px] text-wrap">
             <div
               id="introduction"
-              className={`${font.className} flex flex-col items-center gap-6`}
+              className={`${font.className} flex flex-col items-center gap-6 text-center`}
             >
-              <div className="mt-12 size-1/2 overflow-hidden rounded-full border dark:border-amber-50">
-                <img src="xavier.png" className="" />
-              </div>
               <div>
-                <h1 className="text-center text-2xl font-bold uppercase">
-                  Xavier Fernandes
-                </h1>
-                <p className="mt-2 text-center">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae ab illo inventore veritatis et quasi architecto
-                  beatae vitae dicta sunt explicabo.
+                <p className="mt-12 text-2xl font-bold">Howdy stranger!</p>
+                <p className="mt-2 max-w-xl">
+                  Nice to see you wandering this far across the internet. Here,
+                  you will get to know me a tiny bit better, as I share notes
+                  about both my <strong>personal</strong> and my{' '}
+                  <strong>professional</strong> adventures.
                 </p>
               </div>
-              <ul className="flex w-full flex-col text-sm">
-                <hr className="border-t-[0.5px] border-[#4f4f4f]" />
-                <li className="transition-colors duration-200 ease-out hover:bg-white/10">
-                  <a
-                    href="https://github.com/xavier-batista-fernandes"
-                    className="flex items-center gap-2 px-3 py-3"
-                  >
-                    <ExternalIcon className="h-4 w-4 fill-black dark:fill-white" />
-                    <span>GitHub</span>
-                  </a>
-                </li>
-                <hr className="border-t-[0.5px] border-[#4f4f4f]" />
-                <li className="transition-colors duration-200 ease-out hover:bg-white/10">
-                  <a
-                    href="https://www.linkedin.com/in/xavierbatistafernandes/"
-                    className="flex items-center gap-2 px-3 py-3"
-                  >
-                    <ExternalIcon className="h-4 w-4 fill-black dark:fill-white" />
-                    <span>LinkedIn</span>
-                  </a>
-                </li>
-                <hr className="border-t-[0.5px] border-[#4f4f4f]" />
-              </ul>
+
+              <div className="min-size-1/2 pointer-events-none size-2/5 overflow-hidden rounded-full border select-none dark:border-amber-50">
+                <img src="xavier.png" alt="Portrait of Xavier Fernandes" />
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-thin uppercase">
+                  Xavier Fernandes
+                </h3>
+
+                <p className="mt-1 text-sm opacity-75">
+                  One of the rare moments I stayed still long enough for a
+                  photograph to be taken.
+                </p>
+              </div>
+
+              <div className="mt-6 w-full">
+                <p className="p-3 text-start">
+                  <span className="font-bold">
+                    Do you want to stay in touch?
+                  </span>
+                  <br />
+                  <span className="text-sm">
+                    Have a look at my social links or send me a message.
+                  </span>
+                </p>
+                <ul className="flex flex-col text-sm">
+                  <hr className="border-t-[0.5px] border-[#4f4f4f]" />
+                  <li className="duration-200 ease-out hover:bg-amber-600/5 dark:hover:bg-amber-200/5">
+                    <a
+                      href="https://github.com/xavier-batista-fernandes"
+                      target="_blank"
+                      className="flex items-center gap-2 px-3 py-3"
+                    >
+                      <ExternalIcon className="h-4 w-4 fill-black dark:fill-white" />
+                      <span>GitHub</span>
+                    </a>
+                  </li>
+                  <hr className="border-t-[0.5px] border-[#4f4f4f]" />
+                  <li className="duration-200 ease-out hover:bg-amber-600/5 dark:hover:bg-amber-200/5">
+                    <a
+                      href="https://www.linkedin.com/in/xavierbatistafernandes/"
+                      target="_blank"
+                      className="flex items-center gap-2 px-3 py-3"
+                    >
+                      <ExternalIcon className="h-4 w-4 fill-black dark:fill-white" />
+                      <span>LinkedIn</span>
+                    </a>
+                  </li>
+                  <hr className="border-t-[0.5px] border-[#4f4f4f]" />
+                </ul>
+              </div>
             </div>
             <div>{children}</div>
           </main>
