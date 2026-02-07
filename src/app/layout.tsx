@@ -44,10 +44,10 @@ export default async function RootLayout({
               <div>
                 <p className="mt-12 text-2xl font-bold">Howdy stranger!</p>
                 <p className="mt-2 max-w-xl">
-                  Nice to see you wandering this far across the internet. Here,
-                  you will get to know me a tiny bit better, as I share notes
-                  about both my <strong>personal</strong> and{' '}
-                  <strong>professional</strong> adventures.
+                  Seems you’ve stumbled into my corner of the web.
+                  <br />
+                  Stick around, this is where you can get to know me better —
+                  <strong> both personally and professionally</strong>.
                 </p>
               </div>
 

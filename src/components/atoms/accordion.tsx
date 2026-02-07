@@ -31,7 +31,7 @@ export function Accordion({
       >
         {/* FIXME: TailwindCSS does not support group-hover with animation classes. */}
         <CrossIcon
-          className={`size-6 transition-transform ${isExtended ? '' : 'group-hover:animateSwing rotate-45'} fill-black dark:fill-white`}
+          className={`size-6 shrink-0 transition-transform ${isExtended ? '' : 'group-hover:animateSwing rotate-45'} fill-black dark:fill-white`}
         />
         <div className="grow">{header}</div>
       </button>

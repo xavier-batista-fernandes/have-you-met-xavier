@@ -10,7 +10,7 @@ export default function About() {
     <div className="relative h-full pt-10">
       <div className="flex h-10 items-center gap-2">
         <PersonIcon className="h-full fill-black dark:fill-white" />
-        <h1 className="text-[min(4vw,2rem)] font-bold">HAVE YOU MET ME?</h1>
+        <h1 className="text-[min(4vw,2rem)] font-bold">Have you met me?</h1>
       </div>
       <p className="mt-2">
         I'm a {differenceInYears(new Date(), new Date('2000-07-15'))}-year-old{' '}

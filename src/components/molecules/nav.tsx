@@ -7,6 +7,7 @@ import { BlogIcon } from '../atoms/icons/blog.icon';
 import { FilesIcon } from '../atoms/icons/files.icon';
 import { HammerIcon } from '../atoms/icons/hammer.icon';
 import { PersonIcon } from '../atoms/icons/person.icon';
+import { PotionIcon } from '../atoms/icons/potion.icon';
 
 export function Nav() {
   const { isNavOpen: isOpen, setIsNavOpen: setOpen } = useAppContext();
@@ -24,6 +25,13 @@ export function Nav() {
   }, [isOpen]);
 
   const sections = [
+    {
+      link: '#skills',
+      text: 'Skills',
+      iconComponent: (
+        <PotionIcon className="h-6 w-6 fill-black hover:stroke-3 dark:fill-white" />
+      ),
+    },
     {
       link: '#about',
       text: 'About',

@@ -5,7 +5,7 @@ export default function Work() {
   // About my college years
   const aboutMyCollegeYearsHeader = (
     <h2 className="my-2 text-left text-lg font-bold text-[#5b5b5b] dark:text-amber-50/75">
-      ABOUT MY COLLEGE YEARS
+      Teaching Assistant @ Instituto Superior Técnico (2019–2021)
     </h2>
   );
   const aboutMyCollegeYearsContent = (
@@ -58,7 +58,7 @@ export default function Work() {
   // About my working years
   const aboutMyWorkingYearsHeader = (
     <h2 className="my-2 text-left text-lg font-bold text-[#5b5b5b] dark:text-amber-50/75">
-      ABOUT MY WORKING YEARS
+      Software Developer @ Volkswagen Digital Solutions (2023–Present)
     </h2>
   );
   const aboutMyWorkingYearsContent = (
@@ -110,7 +110,7 @@ export default function Work() {
         <div className="flex h-10 items-center gap-2">
           <FilesIcon className="h-full fill-black dark:fill-white" />
           <h1 className="text-[min(4vw,2rem)] font-bold">
-            MY JOURNEY AS AN ENGINEER.
+            My journey as an engineer.
           </h1>
         </div>
         <p className="mt-2">
